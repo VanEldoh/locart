@@ -4,7 +4,8 @@ class CreateArtworks < ActiveRecord::Migration[5.2]
       t.string :title
       t.text :description
       t.string :size
-      t.string :type
+      t.integer :art_date
+      t.string :art_type
       t.string :category
       t.integer :price
       t.references :user, foreign_key: true
