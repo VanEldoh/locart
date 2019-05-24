@@ -1,2 +1,45 @@
-<h1>Artworks#index</h1>
-<p>Find me in app/views/artworks/index.html.erb</p>
+<div class="banner">
+
+  <div class="container-home">
+    <div class="card-trip">
+  <img src="http://photos1.blogger.com/blogger/2248/3102/320/liam%20gallagher%201997.jpg">
+  <div class="card-trip-infos">
+    <div>
+      <h2>Titre oeuvre</h2>
+      <p>texte description!</p>
+    </div>
+    <h2 class="card-trip-pricing">250 €</h2>
+    <img src='https://avatars2.githubusercontent.com/u/47070259?v=4' class="card-trip-user avatar-bordered"/>
+  </div>
+</div>
+    <h1>Découvrez et louez des oeuvres <br> d’artistes confirmés et émergents. <p><br>blablablublabla ceci est un texte cool</p></h1>
+  </div>
+</div>
+
+
+
+<div class="filterbox">
+<p>ø TYPE </p>
+<p>ø CATEGORY </p>
+<p>ø FORMAT </p>
+<p>ø PRICE </p>
+<p>ø MAP </p>
+</div>
+  
+  <h1><center>All Artworks</center></h1>
+<p><center>Find your perfect artwork</center></p>
+<center><%= link_to 'New Artwork', new_artwork_path %><center>
+
+
+<div class="container">
+  <div class="row">
+    <% @artworks.each do |artwork| %>
+      <div class="col-4">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= artwork.image_url %>)">
+          <%= artwork.title %>
+          <%= link_to artwork_path(artwork) %>
+        </div>
+      </div>
+      <%end%>
+  </div>
+</div>
