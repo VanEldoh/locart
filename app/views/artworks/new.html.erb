@@ -1,2 +1,23 @@
-<h1>Artworks#new</h1>
-<p>Find me in app/views/artworks/new.html.erb</p>
+<h1><center>Add a new Artwork</center></h1>
+
+<div class="banner">
+
+  <div class="container-artwork">
+
+<%= simple_form_for(@artwork) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :title%>
+    <%= f.input :size %>
+    <%= f.input :type %>
+    <%= f.input :category %>
+    <%= f.input :price %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
+
+ </div>
+</div>
