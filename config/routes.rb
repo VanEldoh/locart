@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  # get 'bookings/index'
-  # get 'bookings/update'
-  # get 'artworks/index'
-  # get 'artworks/new'
-  # get 'artworks/create'
-  # get 'artworks/show'
   devise_for :users
   root to: 'artworks#index'
   resources :artworks, only: [:index, :new, :create, :show] do

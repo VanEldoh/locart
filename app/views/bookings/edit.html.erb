@@ -1,0 +1,6 @@
+<h1><%= @booking.artwork.title %></h1>
+<p><%= @booking.start_date %> - <%= @booking.end_date %></p>
+<p><% simple_form_for(@booking) do |f| %></p>
+<p><%= f.input :status, :collection => ["Pending", "Accepted", "Declined"] %></p>
+<button><% f.submit "Save" %></button>
+
