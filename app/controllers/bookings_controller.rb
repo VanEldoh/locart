@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
 
   def edit
     @booking = Booking.find(params[:id])
+    @artwork = Artwork.find(params[:artwork_id])
   end
 
   def update
@@ -32,6 +33,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :status)
+    params.require(:booking).permit(:start_date, :end_date, :status, :user_id, :artwork_id)
   end
 end
