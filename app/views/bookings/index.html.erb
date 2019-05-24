@@ -1,2 +1,16 @@
-<h1>Bookings#index</h1>
-<p>Find me in app/views/bookings/index.html.erb</p>
+<h1>My bookings</h1>
+
+<% @bookings.each do |booking| %>
+  <h2><%= booking.artwork.title %></h2>
+  <p><%= booking.start_date %> - <%= booking.end_date %></p>
+  <p><% booking.status %></p>
+<% end %>
+
+
+<h1>My booking requests</h1>
+
+<% @booking_requests.each do |booking| %>
+  <h2><%= booking.artwork.title %></h2>
+  <p><%= booking.start_date %> - <%= booking.end_date %></p>
+  <p><% booking.status %></p>
+<% end %>
