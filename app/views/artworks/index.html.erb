@@ -25,7 +25,7 @@
 <p>ø PRICE </p>
 <p>ø MAP </p>
 </div>
-  
+
   <h1><center>All Artworks</center></h1>
 <p><center>Find your perfect artwork</center></p>
 <center><%= link_to 'New Artwork', new_artwork_path %><center>
@@ -35,7 +35,7 @@
   <div class="row">
     <% @artworks.each do |artwork| %>
       <div class="col-4">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= artwork.image_url %>)">
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= artwork.photo %>)">
           <%= artwork.title %>
           <%= link_to artwork_path(artwork) %>
         </div>
