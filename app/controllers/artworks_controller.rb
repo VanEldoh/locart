@@ -7,6 +7,7 @@ class ArtworksController < ApplicationController
   end
 
   def create
+    test
   end
 
   def show
