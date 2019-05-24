@@ -1,0 +1,46 @@
+
+.form-inputs{
+width: 30%;
+margin:0 auto;
+text-align: center;
+}
+
+h2{
+  margin-top: 30px;
+}
+
+.btnsign{
+  // border:1px solid grey;
+  // padding: 5px;
+  // border-radius: 5px;
+  // color: grey;
+  // width:100px;
+   display:flex;
+   justify-content: center;
+   margin: 0 auto;
+   margin-top:10px;
+  a{
+    color: black;
+    text-decoration: none;
+    padding:2px;
+    font-size: 12px;
+  }
+}
+
+.btnsignlg{
+  display:flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top:5px;
+  border-radius:5px;
+  width:70px;
+  background-color: #d1d1d1;
+  :hover{
+    background-color:white;
+  }
+}
+
+.form-actions{
+   display:flex;
+   justify-content: center;
+}
