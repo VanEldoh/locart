@@ -7,24 +7,26 @@ class BookingsController < ApplicationController
       redirect_to artwork_path(@artwork)
     else
       render artwork_path(@artwork)
+    end
   end
 
   def index
     @bookings = Booking.where(user: current_user)
-    @bookings = Booking.select{ |booking| booking.user == current_user}
-    @booking_requests = Booking.select{ |booking| booking.artwork.user == current_user}
+    @bookings = Booking.select{ |booking| booking.user == current_user }
+    @booking_requests = Booking.select{ |booking| booking.artwork.user == current_user }
   end
 
   def edit
-   @booking = Booking.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
 
   def update
-  @booking = Booking.find(params[:id])
-  if @booking.update(booking_params)
-      redirect_to artwork_path(@artwork)
-    else
-      render artwork_path(@artwork)
+    @booking = Booking.find(params[:id])
+      if @booking.update(booking_params)
+        redirect_to artwork_path(@artwork)
+      else
+        render artwork_path(@artwork)
+      end
   end
 
   private
