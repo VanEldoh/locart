@@ -13,8 +13,9 @@
 
   <div class="form-inputs">
     <%= f.input :title%>
-    <%= f.input :size %>
-    <%= f.input :art_type %>
+
+    <%= f.input :size, as: :select, prompt: "Pick a size"%>
+    <%= f.input :art_type,as: :select %>
     <%= f.input :category %>
     <%= f.input :price %>
     <%= f.input :photo %>

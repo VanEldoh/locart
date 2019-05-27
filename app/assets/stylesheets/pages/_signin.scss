@@ -32,16 +32,37 @@
   justify-content: center;
   background-color: #144C52;
   margin: 0 auto;
-  margin-top:5px;
   width:100px;
   color: white;
   border: 1px solid #144C52;
   :hover{
     background-color:white;
     border: 1px solid #144C52;
+    color: white;
   }
 }
 
+.btnsignlg:hover{
+  background-color:white;
+  border: 1px solid #144C52;
+  color: #144C52;
+}
+
+.btnsignlg-inverse{
+  display:flex;
+  justify-content: center;
+  background-color: white;
+  margin: 0 auto;
+  width:100px;
+  color: #144C52;
+  border: 1px solid #144C52;
+}
+
+.btnsignlg-inverse:hover{
+  background-color: #144C52;
+  border: 1px solid #144C52;
+  color: white;
+}
 // .form-actions{
 //    display:flex;
 //    justify-content: center;

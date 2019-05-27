@@ -1,3 +1,10 @@
+a{
+    text-decoration: none !important;
+  }
+  a:hover {
+    text-decoration: none !important;
+  }
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
@@ -20,4 +27,26 @@
 
 .nav-item{
   margin-right:10px;
+}
+
+.navbar-link {
+  justify-content: center;
+  background-color: #144C52;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top:5px;
+  width:100px;
+  color: white;
+  border: 1px solid #144C52;
+  a{
+    text-decoration: none !important;
+  }
+  a:hover {
+    text-decoration: none !important;
+  }
+  :hover{
+    background-color:white;
+    border: 1px solid #144C52;
+    text-decoration: none;
+  }
 }
