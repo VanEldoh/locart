@@ -1,11 +1,15 @@
 class ArtworksController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def index
-    @artworks = Artwork.all
+    @artworks = ArtworkPolicy::Scope.new(current_user, Artwork).index
   end
 
   def new
     @artwork = Artwork.new
+  end
+
+  def all
+    @artworks = policy_scope(Artwork)
   end
 
   def create
