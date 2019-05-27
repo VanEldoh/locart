@@ -30,13 +30,15 @@
 .btnsignlg{
   display:flex;
   justify-content: center;
+  background-color: #144C52;
   margin: 0 auto;
   margin-top:5px;
-  border-radius:5px;
-  width:70px;
-  background-color: #d1d1d1;
+  width:100px;
+  color: white;
+  border: 1px solid #144C52;
   :hover{
     background-color:white;
+    border: 1px solid #144C52;
   }
 }
 
