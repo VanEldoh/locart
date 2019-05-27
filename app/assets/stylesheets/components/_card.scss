@@ -1,41 +1,38 @@
-// card
-.card-artwork {
-  margin-top:200px;
+.card-index {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 3px rgba(0,0,0,0.2);
   width: 400px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-artwork > img {
+.card-index > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-
-.card-artwork h2 {
+.card-index h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-artwork p {
+.card-index p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card-artwork .card-artwork-infos {
-  padding: 16px;
+.card-index .card-index-infos {
+  // padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  position: relative;
+  position: absolute;
 }
 
-.card-artwork-infos .card-artwork-user {
+.card-index-infos .card-index-user {
   position: absolute;
   right: 16px;
   top: -20px;
