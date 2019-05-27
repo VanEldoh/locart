@@ -2,9 +2,6 @@ Booking.destroy_all
 Artwork.destroy_all
 User.destroy_all
 
-ARTSIZE = ['small', 'medium', 'large']
-ARTTYPE = ['Painting', 'Photography', 'Prints', 'Sculpture', 'Work on Paper', 'Design', 'Drawing', 'Installation', 'Film/Video']
-ARTCATEGORY = ['Black & White', 'Graphik', 'Expressive', 'Colored']
 
 userTest =  User.new(
   email: "userTest@gmail.com",
@@ -59,9 +56,9 @@ book.save!
   artwork = Artwork.new(
     title: Faker::TvShows::TwinPeaks.quote,
     description: Faker::Lorem.paragraph(2),
-    size: ARTSIZE.sample,
-    art_type: ARTTYPE.sample,
-    category: ARTCATEGORY.sample,
+    size: Artwork::ARTSIZE.sample,
+    art_type: Artwork::ARTTYPE.sample,
+    category: Artwork::ARTCATEGORY.sample,
     art_date: rand(1980..2019),
     price: rand(200..1200),
     user_id: user.id
