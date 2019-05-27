@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+gem 'bootstrap', '~> 4.3.1'
 gem 'faker'
 gem 'bootsnap', require: false
 gem 'devise'
