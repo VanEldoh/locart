@@ -72,5 +72,13 @@ book.save!
   User.create( email: "ab@gmail.com", password:"12345678")
 end
 
-
+bookingTest =  Booking.new(
+  start_date: Date.new(2019,05,27),
+  end_date: Date.new(2019,05,30),
+  user_id: User.first.id,
+  #TODO Associer artwork réel
+  artwork_id: 1,
+  status: "pending"
+  )
+userTest.save!
 
