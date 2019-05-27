@@ -7,6 +7,7 @@ class Artwork < ApplicationRecord
   validates :art_type, presence: true
   validates :category, presence: true
   validates :price, presence: true
+  validates :photo, presence: true
 
   mount_uploader :photo, PhotoUploader
 

@@ -1,6 +1,40 @@
 <h1>Artworks#show</h1>
-<p>Find me in app/views/artworks/show.html.erb</p>
-<h2><%= @artwork.title %></h2>
-<p><%= @artwork.type%></p>
+
+<div class="body-show">
+  <div class="container">
+
+    <div class="row ">
+
+      <div class=".col-6 .col-sm-3">
+        <div class="card-artwork">
+
+          <div class="card-artwork-infos">
+            <div class="card-infos-img" style="background-image: url('<%= cl_image_path @artwork.photo%>');">
+            </div>
+          <div class=".col-6 .col-sm-3">
+            <div class="card-infos-content">
+              <h2><%= @artwork.title %></h2>
+                <%= @artwork.description %>
+                <%= @artwork.size %>
+                <%= @artwork.art_date %>
+                <%= @artwork.art_type %>
+                <%= @artwork.category %>
+                <%= @artwork.price %>
+            </div>
+          </div>
+         </div>
+      </div>
+    </div>
+          <div class="card-btn">
+            <%= link_to "Complete the artwork", new_artwork_path(@artwork), class: "btn btn-primary mt-10" %>
+            <%= link_to "View all artworks", artworks_path, class: "btn btn-outline-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
