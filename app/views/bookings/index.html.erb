@@ -1,4 +1,32 @@
-<h1>My bookings</h1>
+<h2>A confirmer</h2>
+
+<section class="section">
+  <div class="container">
+
+      <div class="row card-booking pt-3">
+        <figure class="underline col-md-7 col-xs-12 col-sm-6">
+          <img src="https://storage.gra1.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/exhibition/8129_1_s.jpg" class="w100" alt="Bethany Harper Williams - Oeuvres récentes">
+          <figcaption>Nom de l'œuvre</figcaption>
+        </figure>
+        <div id="content" class="col-md-5 col-xs-12 col-sm-6">
+          <h2><a href="">locataire</a></h2>
+            <!-- TODO Mettre avatar du locataire-->
+          <img src="" width="48pt" class="rounded-circle" alt="">
+          <p class="date">
+            <i class="far fa-calendar"></i>
+            <span class="">26 avril au 10 mai 2019</span>
+          </p>
+          <p class="name">titre</p>
+          <p class="name">année</p>
+          <p class="name">medium & format</p>
+          <p class="name">catégorie</p>
+          <button type="button" class="btn btn-primary">ok</button>
+          <button type="button" class="btn btn-danger">cancel</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 <% @bookings.each do |booking| %>
   <h2><%= booking.artwork.title %></h2>
@@ -6,9 +34,8 @@
   <p><% booking.status %></p>
 <% end %>
 
-
-<h1>My booking requests</h1>
-
+historique
+<h1>My booking request</h1>
 <% @booking_requests.each do |booking| %>
   <h2><%= booking.artwork.title %></h2>
   <p><%= booking.start_date %> - <%= booking.end_date %></p>

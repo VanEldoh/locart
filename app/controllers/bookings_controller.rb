@@ -7,6 +7,7 @@ class BookingsController < ApplicationController
       redirect_to artwork_path(@artwork)
     else
       render artwork_path(@artwork)
+    end
   end
 
   def index
@@ -21,10 +22,11 @@ class BookingsController < ApplicationController
 
   def update
   @booking = Booking.find(params[:id])
-  if @booking.update(booking_params)
+    if @booking.update(booking_params)
       redirect_to artwork_path(@artwork)
     else
       render artwork_path(@artwork)
+    end
   end
 
   private

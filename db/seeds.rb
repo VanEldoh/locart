@@ -1,3 +1,4 @@
+Booking.destroy_all
 Artwork.destroy_all
 User.destroy_all
 
@@ -27,6 +28,8 @@ ARTCATEGORY = ['Black & White', 'Graphik', 'Expressive', 'Colored']
     )
   puts "created #{artwork.title}"
   artwork.save!
+
+  User.create( email: "ab@gmail.com", password:"12345678")
 end
 
 
