@@ -19,8 +19,8 @@
           Welcome back <strong><%= current_user.first_name %></strong> !!
 <!--          link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
  -->       <% else %>
-         <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-         <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+         <%= link_to "Sign up", new_user_registration_path, class: "btnsignlg-inverse"  %>
+         <%= link_to "Login", new_user_session_path, class: "btnsignlg"  %>
       <% end %>
 
       </li>
@@ -40,7 +40,7 @@
             <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", method: "delete" %>
           <% end %>
             <% else %>
-            <%= link_to "Home", artworks_path, class: "dropdown-item" %>
+            <%#= link_to "Home", artworks_path, class: "dropdown-item" %>
           <% end %>
         </div>
       </li>
