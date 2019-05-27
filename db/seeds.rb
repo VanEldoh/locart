@@ -6,6 +6,46 @@ ARTSIZE = ['small', 'medium', 'large']
 ARTTYPE = ['Painting', 'Photography', 'Prints', 'Sculpture', 'Work on Paper', 'Design', 'Drawing', 'Installation', 'Film/Video']
 ARTCATEGORY = ['Black & White', 'Graphik', 'Expressive', 'Colored']
 
+userTest =  User.new(
+  email: "userTest@gmail.com",
+  password: "123456",
+  first_name: "test",
+  last_name: "test",
+  username: "test"
+  )
+userTest.save!
+
+userTest2 =  User.new(
+  email: "userTest2@gmail.com",
+  password: "654321",
+  first_name: "test2",
+  last_name: "test2",
+  username: "test2"
+  )
+userTest2.save!
+
+artTest = Artwork.new(
+  title: "test",
+  description: "test",
+  size: "small",
+  art_type: 'Painting',
+  category: 'Graphik',
+  art_date: 1990,
+  price: 400
+  )
+artTest.user = userTest
+artTest.save!
+
+book = Booking.new(
+  start_date: '2020-02-02',
+  end_date: '2020-02-10',
+  status: "Pending"
+  )
+
+book.artwork = artTest
+book.user = userTest2
+book.save!
+
 20.times do
   user = User.new(
     email: Faker::Internet.email,
