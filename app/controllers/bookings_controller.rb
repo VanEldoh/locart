@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
     @bookings = Booking.where(user: current_user)
     @bookings = Booking.select{ |booking| booking.user == current_user }
     @booking_requests = Booking.select{ |booking| booking.artwork.user == current_user }
+    # @booking_requests = Booking.where(user: current_user)
   end
 
   def edit
