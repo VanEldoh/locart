@@ -3,11 +3,15 @@
     <%= image_tag "https://i.ibb.co/Hdy78nT/LocArt.jpg" %>
   <% end %>
 
+
+<div class=".search-form-control">
 <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :artwork, input_html: {value: ""} %>
+  <%= f.input :artwork, input_html: {placeholder: "Search"}, label: "" %>
   <%= f.submit "Search", class: "btn btn-primary" %>
   <% end %>
 
+
+</div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">

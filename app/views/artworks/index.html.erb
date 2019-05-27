@@ -1,63 +1,56 @@
-<div class="banner">
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(http://www.kulturgueter.ch/Bilder/Bi_We/BiWeFr/br_4.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(http://www.kulturgueter.ch/Bilder/Bi_We/BiWeFr/br_4.jpg);">
+  <div class="form-home">
+    <div class="container-home">
+      <form>
+        <h1>Découvrez et louez des oeuvres <br> d’artistes confirmés et émergents.</h1>
+        <div class="form-group">
+          <label for="inputAddress">Où?</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="City">
+        </div>
 
-<div class="form-home">
-  <div class="container-home">
-   <form>
-    <h1>Découvrez et louez des oeuvres <br> d’artistes confirmés et émergents.</h1>
-  <div class="form-group">
+        <div class="form-group">
+            <label for="inputCity">Du</label>
+            <input type="text" class="form-control" id="inputCity" placeholder="From">
+        </div>
 
-    <label for="inputAddress">Où?</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="City">
-  </div>
-  <div class="form-group">
-      <label for="inputCity">Du</label>
-      <input type="text" class="form-control" id="inputCity" placeholder="From">
-  </div>
-      <div class="form-group">
-      <label for="inputDate">Au</label>
-      <input type="text" class="form-control" id="inputDate" placeholder="To">
-      </div>
-    <div class="form-group">
-      <label for="inputType">Type</label>
-      <input type="text" class="form-control" id="inputType" placeholder="Type?">
-    </div>
-  <button type="submit" class="btn btn-primary">Rechercher</button>
+        <div class="form-group">
+          <label for="inputDate">Au</label>
+          <input type="text" class="form-control" id="inputDate" placeholder="To">
+        </div>
+
+        <div class="form-group">
+            <label for="inputType">Type</label>
+            <input type="text" class="form-control" id="inputType" placeholder="Type?">
+        </div>
+        <button type="submit" class="btn btn-primary">Rechercher</button>
+      </form>
     </div>
   </div>
 </div>
-</div>
-</div>
-</form>
-  </div>
 
 <div class="filterbox">
-<p>ø TYPE </p>
-<p>ø CATEGORY </p>
-<p>ø FORMAT </p>
-<p>ø PRICE </p>
-<p>ø MAP </p>
+  <p>ø TYPE </p>
+  <p>ø CATEGORY </p>
+  <p>ø FORMAT </p>
+  <p>ø PRICE </p>
+  <p>ø MAP </p>
 </div>
 
-  <h1><center>All Artworks</center></h1>
-<p><center>Find your perfect artwork</center></p>
+<!-- <h1><center>All Artworks</center></h1> -->
+<h1><center>Find your perfect artwork</center></h1>
 <center><%= link_to 'New Artwork', new_artwork_path %></center>
 
 <div class="container">
-<% @artworks.each do |artwork| %>
-<div class="card-index">
-  <img src="<%= artwork.photo %>">
+  <% @artworks.each do |artwork| %>
+  <div class="card-index">
+    <img src="<%= artwork.photo %>">
+    <div class="card-index-infos">
       <p><%= artwork.category %></p>
-
-    <h2><%= artwork.price %>€</h2>
-  <div class="card-index-infos">
-    <div>
-      <h2></h2>
-    <%end  %>
-  </div>
+      <h2><%= artwork.price %>€</h2>
+     </div>
+    </div>
+  <%end%>
 </div>
-</div>
-
 
 <%= render 'shared/footer' %>
 

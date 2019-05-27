@@ -28,7 +28,6 @@
   // padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   position: absolute;
 }
 
@@ -39,6 +38,10 @@
   width: 40px;
 }
 
+.container{
+  display:flex;
+  justify-content: space-between;
+}
 
 .card-booking {
   background: white;

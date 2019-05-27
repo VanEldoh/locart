@@ -9,6 +9,9 @@ a{
   justify-content: space-between;
   background: white;
   border-bottom: 2px solid grey;
+  abbr{
+    display:none;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,9 +23,7 @@ a{
 }
 .search-form-control{
   display: flex;
-  margin:0px;
-  margin-left: -530px;
-  width: 200px;
+  width: 100px;
 }
 
 .nav-item{
@@ -38,13 +39,7 @@ a{
   width:100px;
   color: white;
   border: 1px solid #144C52;
-  a{
-    text-decoration: none !important;
-  }
-  a:hover {
-    text-decoration: none !important;
-  }
-  :hover{
+  &:hover{
     background-color:white;
     border: 1px solid #144C52;
     text-decoration: none;

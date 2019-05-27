@@ -2,9 +2,10 @@
 
 <section class="section">
   <div class="container">
-<% 3.times do %>
+<% @booking_requests.each do |booking| %>
       <div class="row card-booking py-3 mb-3">
         <figure class="underline col-sm-4">
+          <%#= cl_image_tag booking.artwork.photo, class: "w100" %>
           <img src="https://storage.gra1.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/exhibition/8129_1_s.jpg" class="w100" alt="Bethany Harper Williams - Oeuvres récentes">
           <figcaption>Nom de l'œuvre</figcaption>
         </figure>
@@ -14,10 +15,11 @@
           <img src="" width="48pt" class="rounded-circle" alt="">
           <p class="date">
             <i class="far fa-calendar"></i>
-            <span class=""><strong>26 avril au 10 mai 2019</strong></span>
+            <span class=""><strong><%= booking.start_date %> to <%= booking.end_date %></strong></span>
           </p>
-          <p class="name">titre</p>
-          <p class="name">année</p>
+
+          <p class="name"><%= booking.artwork.title %></p>
+          <p class="name"><%= booking.artwork.art_date %></p>
           <p class="name">medium & format</p>
           <p class="name">catégorie</p>
           <button type="button" class="btn btn-primary">ok</button>
@@ -25,23 +27,18 @@
           <button type="button" class="btn btn-danger">cancel</button>
         </div>
       </div>
-<% end %>
+
     </div>
   </section>
 
 
-  test 1
-  <%= @bookings.first %>
-
-<% @bookings.each do |booking| %>
-  <h2><%= booking.artwork.title %></h2>
-  test 2
-  test 2
+<!-- <%# @bookings.each do |booking| %> -->
+<!--  <h2><%= booking.artwork.title %></h2> -->
   <p><%= booking.start_date %> - <%= booking.end_date %></p>
   <p><%= booking.status %></p>
 <% end %>
 
-historique
+
 <h1>My booking request</h1>
 <% @booking_requests.each do |booking| %>
   <h2><%= booking.artwork.title %></h2>
