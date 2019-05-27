@@ -38,18 +38,19 @@
 
 <!-- <h1><center>All Artworks</center></h1> -->
 <h1><center>Find your perfect artwork</center></h1>
-<center><%= link_to 'New Artwork', new_artwork_path %></center>
+
 
 <div class="container">
   <% @artworks.each do |artwork| %>
-  <div class="card-index">
-    <img src="<%= artwork.photo %>">
-    <div class="card-index-infos">
+<%= link_to artwork_path(artwork) do%>
+  <div class="card-index" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(<%= cl_image_path artwork.photo %>">
+      <div class="infos">
       <p><%= artwork.category %></p>
       <h2><%= artwork.price %>€</h2>
-     </div>
     </div>
-  <%end%>
+    </div>
+       <%end%>
+   <%end%>
 </div>
 
 <%= render 'shared/footer' %>
