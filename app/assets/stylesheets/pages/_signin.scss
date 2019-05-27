@@ -35,6 +35,7 @@
   width:100px;
   color: white;
   border: 1px solid #144C52;
+  padding: 10px
   :hover{
     background-color:white;
     border: 1px solid #144C52;
@@ -56,9 +57,28 @@
   width:100px;
   color: #144C52;
   border: 1px solid #144C52;
+  padding: 10px;
 }
 
 .btnsignlg-inverse:hover{
+  background-color: #144C52;
+  border: 1px solid #144C52;
+  color: white;
+}
+
+.btnsign-inverse{
+  display:flex;
+  justify-content: center;
+  background-color: white;
+  margin: 0 auto;
+  width:200px;
+  color: #144C52;
+  border: 1px solid #144C52;
+  float: right;
+  padding: 10px;
+}
+
+.btnsign-inverse:hover{
   background-color: #144C52;
   border: 1px solid #144C52;
   color: white;
