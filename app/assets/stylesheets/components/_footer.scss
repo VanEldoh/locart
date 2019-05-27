@@ -1,7 +1,6 @@
 .footer {
   margin-top: 20px;
   background: #144C52;
-  align-items: center;
   justify-content: space-around;
   height: 200px;
   clip-path: ellipse(70% 70% at 50% 100%);
@@ -9,8 +8,8 @@
   color: white;
 }
 .footer-links {
+  margin-left: 45%;
   padding-top: 100px;
-  align-items: center;
   color: white;
 }
 .footer-links a {
@@ -27,5 +26,6 @@
   color: #D23333;
 }
 .footer-copyright{
+  margin-left: 30%;
 margin-top:2%;
 }
