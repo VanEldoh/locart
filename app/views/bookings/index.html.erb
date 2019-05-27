@@ -30,13 +30,8 @@
   </section>
 
 
-  test 1
-  <%= @bookings.first %>
-
 <% @bookings.each do |booking| %>
   <h2><%= booking.artwork.title %></h2>
-  test 2
-  test 2
   <p><%= booking.start_date %> - <%= booking.end_date %></p>
   <p><%= booking.status %></p>
 <% end %>
