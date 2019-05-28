@@ -1,4 +1,8 @@
 // Specific CSS for your home-page
+body {
+  background-color:white;
+}
+
 .container-home{
 display: flex;
 }
@@ -56,6 +60,12 @@ border:0px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 24px;
 
+}
+
+.container-main {
+  display: flex;
+  justify-content: space-between;
+  background: white;
 }
 
 

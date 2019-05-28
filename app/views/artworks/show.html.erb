@@ -5,8 +5,7 @@
 <div class="container">
   <div class= "card-container d-flex">
     <div class="show-artwork-image-card" id="card-left"
-      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-     url('<%= cl_image_path @artwork.photo, height: 300, width: 400, crop: :fill %>')">
+      style="background-image: url('<%= cl_image_path @artwork.photo, height: 300, width: 400, crop: :fill %>')">
     </div>
 
   <div class="show-artwork-description" id="card-right">
@@ -54,6 +53,7 @@
 </div> -->
 
 
+<%= render 'shared/footer' %>
 
 
 
