@@ -6,6 +6,11 @@ display: flex;
 .btn{
 background-color:#144C52;
 border:0px;
+
+&:hover {
+  color: #144C52;
+  background-color: white;
+}
 }
 
 .banner {
