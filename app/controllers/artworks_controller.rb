@@ -10,17 +10,16 @@ class ArtworksController < ApplicationController
 
   def all
     @artworks = policy_scope(Artwork).where.not(latitude: nil, longitude: nil)
-
-    if !params[:artwork].nil? && !params[:artwork][:type].empty?
-      @artworks = @artworks.where(art_type: params[:artwork][:type])
+    if !params[:art_type].nil? && !params[:art_type].empty? && params[:art_type] != "All types"
+      @artworks = @artworks.where(art_type: params[:art_type])
     end
 
-    if !params[:artwork].nil? && !params[:artwork][:category].empty?
-      @artworks = @artworks.where(category: params[:artwork][:category])
+    if !params[:category].nil? && !params[:category].nil? && params[:category] != "All Categories"
+      @artworks = @artworks.where(category: params[:category])
     end
 
-    if !params[:artwork].nil? && !params[:artwork][:size].empty?
-      @artworks = @artworks.where(size: params[:artwork][:size])
+    if !params[:size].nil? && !params[:size].nil? && params[:size] != "All sizes"
+      @artworks = @artworks.where(size: params[:size])
     end
 
     @artworks = @artworks.near(params[:address], 10) if !params[:address].nil? && !params[:address].empty?

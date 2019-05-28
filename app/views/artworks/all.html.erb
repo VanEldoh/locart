@@ -2,9 +2,9 @@
   <%= form_tag(all_artworks_path, method: "get") do %>
         <%= label_tag(:address, "Où") %>
         <%= text_field_tag(:address) %>
-        <%= select("artwork", "type", Artwork::ARTTYPE, include_blank: 'All types') %>
-        <%= select("artwork", "size", Artwork::ARTSIZE, include_blank: 'All sizes') %>
-        <%= select("artwork", "category", Artwork::ARTCATEGORY, include_blank: 'All categories') %>
+        <%= select_tag(:art_type, options_for_select(Artwork::ARTTYPE)) %>
+        <%= select_tag(:size, options_for_select(Artwork::ARTSIZE)) %>
+        <%= select_tag(:category, options_for_select(Artwork::ARTCATEGORY)) %>
         <%= submit_tag("Search") %>
       <% end %>
 </div>

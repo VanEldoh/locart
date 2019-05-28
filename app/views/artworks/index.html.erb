@@ -5,7 +5,7 @@
            <h1>Discover and rent artworks<br> by renowned and emerging artists.</h1>
         <%= label_tag(:address, "Where") %>
         <%= text_field_tag(:address) %>
-        <%= select("artwork", "type", Artwork::ARTTYPE, include_blank: 'All types') %>
+        <%= select_tag(:art_type, options_for_select(Artwork::ARTTYPE)) %>
         <%= submit_tag("Search") %>
       <% end %>
 
@@ -41,6 +41,7 @@
     </div>
   </div>
 </div>
+  <div class="bg-white">
   <h1>
            <center> <span id="typed"></span></center>
         </h1>
@@ -49,10 +50,10 @@
 <h1 style="text-align:center">Latest artworks</h1>
 <div class="container">
 
-<%= link_to "add an Artwork babay", new_artwork_path  %>
+<%= link_to "add an Artwork", new_artwork_path, class: "btnsignlg" %>
 </div>
 
-<div class="container">
+<div class="container bg-white">
 <div class="container-ind">
   <% @artworks.each do |artwork| %>
   <%= link_to artwork_path(artwork) do%>
@@ -60,14 +61,16 @@
     <div class="inner-div" style="background: url(<%= cl_image_path artwork.photo %>) center">
     </div>
   </div>
+
     <div class="infos-card-ind">
       <h5><%= artwork.title %></h5>
       <h5><%= artwork.price %>€</h5>
       </div>
+      <p class="artwork-title"><%= artwork.title %></p>
   <%end%>
   <%end%>
 </div>
 </div>
-
+</div>
 <%= render 'shared/footer' %>
 
