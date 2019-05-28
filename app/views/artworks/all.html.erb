@@ -1,0 +1,35 @@
+<div class="map-content">
+      <div class="map-cards">
+  <% @artworks.each do |artwork| %>
+  <%= link_to artwork_path(artwork) do%>
+    <div class="infos"style="background: url(<%= cl_image_path artwork.photo %>) center">
+    </div>
+    <div class="infos-card-ind">
+      <h5><%= artwork.title %></h5>
+      <h5><%= artwork.price %>€</h5>
+      </div>
+  <%end%>
+  <%end%>
+
+</div>
+
+
+      <div
+  id="map"
+  style="width: 100%;
+  height: 600px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

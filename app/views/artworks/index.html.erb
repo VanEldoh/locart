@@ -30,29 +30,20 @@
   </div>
 </div>
 
-<div class="filterbox">
-  <p>ø TYPE </p>
-  <p>ø CATEGORY </p>
-  <p>ø FORMAT </p>
-  <p>ø PRICE </p>
-  <p>ø MAP </p>
-</div>
-
 <!-- <h1><center>All Artworks</center></h1> -->
-<h1><center>Find your perfect artwork</center></h1>
-
-
-<div class="container">
+<h4><center>Find your perfect artwork</center></h4>
+<%= link_to "add an Artwork babay", new_artwork_path  %>
+<div class="container-ind">
   <% @artworks.each do |artwork| %>
-<%= link_to artwork_path(artwork) do%>
-  <div class="card-index" style="background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(<%= cl_image_path artwork.photo %>">
-      <div class="infos">
-      <p><%= artwork.category %></p>
-      <h2><%= artwork.price %>€</h2>
+  <%= link_to artwork_path(artwork) do%>
+    <div class="infos"style="background: url(<%= cl_image_path artwork.photo %>) center">
     </div>
-    </div>
-       <%end%>
-   <%end%>
+    <div class="infos-card-ind">
+      <h5><%= artwork.title %></h5>
+      <h5><%= artwork.price %>€</h5>
+      </div>
+  <%end%>
+  <%end%>
 </div>
 
 <%= render 'shared/footer' %>

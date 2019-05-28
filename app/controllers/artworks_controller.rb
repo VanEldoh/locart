@@ -2,6 +2,7 @@ class ArtworksController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   def index
     @artworks = ArtworkPolicy::Scope.new(current_user, Artwork).index
+
   end
 
   def new
@@ -10,6 +11,15 @@ class ArtworksController < ApplicationController
 
   def all
     @artworks = policy_scope(Artwork)
+
+    @artworks = Artwork.where.not(latitude: nil, longitude: nil)
+
+    @markers = @artworks.map do |artwork|
+      {
+        lat: artwork.latitude,
+        lng: artwork.longitude
+      }
+    end
   end
 
   def create
@@ -30,6 +40,6 @@ class ArtworksController < ApplicationController
   private
 
   def artwork_params
-    params.require(:artwork).permit(:title, :size, :art_type, :category, :price, :photo)
+    params.require(:artwork).permit(:title, :size, :art_type, :category, :price, :photo, :address, :latitude, :longitude)
   end
 end
