@@ -3,6 +3,10 @@ body {
   background-color:white;
 }
 
+a {
+    text-decoration: none;
+  }
+
 .container-home{
 display: flex;
 }
@@ -19,8 +23,11 @@ border:0px;
 
 .banner {
   background-position: center;
-  height: 70vh;
+  height: 100vh;
   width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
   //border-bottom: 1px solid black;
 }
 
@@ -124,21 +131,20 @@ h4{
     padding-bottom: 20px;
   }
   form{
-    margin: 80px auto;
+    margin: 130px auto;
     padding-top: 0px;
     padding: 80px;
     border-radius: 0px;
     background-color: rgba(255, 255, 255, 0.9);  }
   button{
-    background-color: #144C52;
     border:none;
-    float: right;
   }
 }
 
 h1 {
   font-size: 22px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .card-result {
@@ -167,4 +173,45 @@ h1 {
 .inner-div:hover
 {
      transform: scale(1.2);
+}
+
+.artwork-title {
+  font-size: 14px;
+}
+
+.artwork-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.artwork-artist {
+  font-size: 16px;
+
+}
+
+.container-header {
+  margin-top: 50px;
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.green-style {
+  color: #FF6D70;
+  font-size: 16px;
+}
+
+#section-title {
+  border-bottom: 2px solid #000;
+  padding-bottom: 6px;
+}
+
+#big-title {
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+.animation-art {
+  padding-bottom: 20px;
 }
