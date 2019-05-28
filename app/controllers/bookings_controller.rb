@@ -1,12 +1,15 @@
 class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
-    @booking.artwork = Artwork.find(params[:id])
+    @artwork = Artwork.find(params[:artwork_id])
+    @booking.artwork = @artwork
     @booking.user = current_user
-    if @booking.save
-      redirect_to artwork_path(@artwork)
+    @booking.status = "Pending"
+
+    if @booking.save!
+      redirect_to artwork_bookings_path(@artwork)
     else
-      render artwork_path(@artwork)
+      redirect_to artwork_path(@artwork)
     end
   end
 
@@ -32,6 +35,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :status, :user_id, :artwork_id)
+    params.require(:booking).permit(:start_date, :end_date, :user_id, :artwork_id, :photo)
   end
 end

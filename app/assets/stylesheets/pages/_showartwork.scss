@@ -21,16 +21,9 @@
   width: 35%;;
 }
 
-.book-artwork-date-card h1{
+.show-artwork-card h1{
+  font-size: 25px;
   color: #144C52;
-  margin-bottom: 75px;
-}
-
-.show-artwork-card h2 {
-  font-weight: 300;
-  font-size: 52px;
-  color: #144C52;
-  letter-spacing: -2px;
 }
 
 .show-artwork-card p {
@@ -38,14 +31,22 @@
   font-size: 16px;
   font-weight: 300;
   color: #86939E;
-  line-height: 24px;
+  line-height: 15px;
+  text-align: right;
 }
 
-.show-artwork-card span {
+.show-artwork-card h2 {
   font-size: 20px;
   font-weight: 300;
   color: #144C52;
   margin-right: 20px;
+}
+
+.form-wrapper h2 {
+  font-weight: 300;
+  font-size: 25px;
+  color: #144C52;
+  text-align: left;
 }
 
 /* Artwork Button */
@@ -82,20 +83,13 @@
 }
 
 
-
-/* Artwork Price */
-.artwork-price {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-}
-
-.artwork-price span {
-  font-size: 35px;
+.show-artwork-card span {
+  font-size: 15px;
   font-weight: 300;
-  color: #43474D;
+  color: #144C52;
   margin-right: 20px;
   font-weight: bold;
+  text-align: right;
 }
 
 
