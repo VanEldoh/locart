@@ -1,88 +1,96 @@
 
 .card-container {
+  margin-top: 32px;
   background-color: white;
   height: 100%;
   padding: 20px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 #card-left{
   padding-right: 15px;
-  width: 65%;
-  position: relative;
+  width: 60%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #card-right{
-  margin-top: 60px;
   margin-bottom: 20px;
   width: 35%;;
-  position: relative;
-  border-bottom: 1px solid #E1E8EE;
 }
 
-h2 {
-  font-weight: 300;
-  font-size: 52px;
-  color: #43484D;
-  letter-spacing: -2px;
+.show-artwork-card h1{
+  font-size: 25px;
+  color: #144C52;
 }
 
-p {
+.show-artwork-card p {
   display: block;
   font-size: 16px;
   font-weight: 300;
   color: #86939E;
-  line-height: 24px;
+  line-height: 15px;
+  text-align: right;
 }
 
-// .card-artwork-description span {
-//   font-size: 12px;
-//   color: #358ED7;
-//   letter-spacing: 1px;
-//   text-transform: uppercase;
-//   text-decoration: none;
-// }
-// .card-artwork-description h1 {
-//   font-weight: 300;
-//   font-size: 52px;
-//   color: #43484D;
-//   letter-spacing: -2px;
-// }
-
-
-/* Artwork Price */
-.artwork-price {
-  display: flex;
-  align-items: center;
-}
-
-.artwork-price span {
-  font-size: 26px;
+.show-artwork-card h2 {
+  font-size: 20px;
   font-weight: 300;
-  color: #43474D;
+  color: #144C52;
   margin-right: 20px;
 }
+
+.form-wrapper h2 {
+  font-weight: 300;
+  font-size: 25px;
+  color: #144C52;
+  text-align: left;
+}
+
+/* Artwork Button */
 
 .card-btn-booking {
-  display: inline-block;
-  background-color: #7DC855;
-  border-radius: 6px;
-  font-size: 16px;
-  color: #FFFFFF;
-  text-decoration: none;
-  padding: 12px 30px;
-  transition: all .5s;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+    border: 1px solid #144C52;
+    color: #144C52;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 22px;
 }
+
 .card-btn-booking:hover {
-  background-color: #64af3d;
+  background-color: #144C52;
+  color: white;
 }
-span {
-  font-size: 26px;
+
+.card-btn {
+  color: #144C52;
+  padding-left:20px;
+  margin-top: 20px;
+}
+
+.card-btn:hover {
+  color: #144C52;
+}
+
+
+.show-artwork-card span {
+  font-size: 15px;
   font-weight: 300;
-  color: #43474D;
+  color: #144C52;
   margin-right: 20px;
+  font-weight: bold;
+  text-align: right;
 }
-
-
 
 
 /* Responsive */
