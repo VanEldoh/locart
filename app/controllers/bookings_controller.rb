@@ -32,6 +32,10 @@ class BookingsController < ApplicationController
     end
   end
 
+  def status_change
+    raise
+  end
+
   private
 
   def booking_params
