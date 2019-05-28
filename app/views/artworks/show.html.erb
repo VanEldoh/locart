@@ -4,6 +4,7 @@
 
 <div class="container">
   <div class= "card-container d-flex">
+
     <div class="show-artwork-image-card" id="card-left"
       style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
      url('<%= cl_image_path @artwork.photo, height: 300, width: 400, crop: :fill %>')">
@@ -14,10 +15,10 @@
         <h2><%= @artwork.category%></h2>
         <h1><strong><%= @artwork.title %></strong></h1>
         <span><strong><%= @artwork.price %>€/per day</strong></span>
-        <p> <%= @artwork.description %></p>
-        <p><%= @artwork.size%></p>
-        <p><%= @artwork.art_date %></p>
-        <p><%= @artwork.art_type %></p>
+        <p><strong><%="Size:  "%></strong><%= @artwork.size%></p>
+        <p><strong><%="Date:  "%></strong><%= @artwork.art_date %></p>
+        <p><strong><%="Type:  "%></strong><%= @artwork.art_type %></p>
+        <p><strong><%="Technique:  "%></strong><%= @artwork.description %></p>
 
         <div class="">
           <div class="form-wrapper pr-4" style="width: 400px; margin: 0 auto;">
@@ -33,27 +34,6 @@
     </div>
   </div>
 </div>
-
-  <!--     <div class="show-artwork-price">
-        <span><strong><%= @artwork.price %>€/per day</strong></span>
-      </div>
-  </div>h1
-
-    <div class= "book-artwork-date-card" style='margin-top: 100px;'>
-      <h1><%= "Book your painting" %></h1>
-      <input type='text' class="form-control" id='datepicker' placeholder='Select Date' style='width: 300px;' ><br><br>
-
-      <input type='text' class="form-control" id='datepicker2' placeholder='Select Date' style='width: 300px;' >
-      <%= link_to "BOOK", artworks_path, class: "card-btn-booking" %>
-    </div> -->
-<!--
-  </div>
-</div>
-</div>
- </div>
-</div> -->
-
-
 
 
 
