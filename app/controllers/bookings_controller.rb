@@ -11,10 +11,8 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.where(user: current_user)
-    @bookings = Booking.select{ |booking| booking.user == current_user }
-    @booking_requests = Booking.select{ |booking| booking.artwork.user == current_user }
-    # @booking_requests = Booking.where(user: current_user)
+    @booking_requests = Booking.select { |booking| booking.artwork.user == current_user }
+    @bookings = Booking.where(user_id: current_user.id)
   end
 
   def edit
@@ -24,11 +22,11 @@ class BookingsController < ApplicationController
 
   def update
     @booking = Booking.find(params[:id])
-      if @booking.update(booking_params)
-        redirect_to artwork_path(@artwork)
-      else
-        render artwork_path(@artwork)
-      end
+    if @booking.update(booking_params)
+      redirect_to artwork_path(@artwork)
+    else
+      render artwork_path(@artwork)
+    end
   end
 
   private

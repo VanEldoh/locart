@@ -7,7 +7,7 @@
 <div class=".search-form-control">
 <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
   <%= f.input :artwork, input_html: {placeholder: "Search"}, label: "" %>
-  <%= f.submit "Search", class: "btn btn-primary" %>
+  <%= f.submit "Search", class: "btn btnsignlg" %>
   <% end %>
 
 
@@ -19,8 +19,10 @@
           Welcome back <strong><%= current_user.first_name %></strong> !!
 <!--          link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
  -->       <% else %>
+        <div class="nav-button">
          <%= link_to "Sign up", new_user_registration_path, class: "btnsignlg-inverse"  %>
          <%= link_to "Login", new_user_session_path, class: "btnsignlg"  %>
+        </div>
       <% end %>
 
       </li>
