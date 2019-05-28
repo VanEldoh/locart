@@ -42,15 +42,22 @@
   </div>
 </div>
   <div class="bg-white">
-  <h1>
-           <center> <span id="typed"></span></center>
-        </h1>
+
 
 <!-- <h1><center>All Artworks</center></h1> -->
+<div class="container-header">
+  <div class="section-title">
 <h1 style="text-align:center">Latest artworks</h1>
+  </div>
+        <h1>
+  <div class ="animation-art">
+           <center> <span id="typed"></span></center>
+        </h1>
+  </div>
+</div>
 <div class="container">
 
-<%= link_to "add an Artwork", new_artwork_path, class: "btnsignlg" %>
+<%##= link_to "add an Artwork", new_artwork_path, class: "btnsignlg" %>
 </div>
 
 <div class="container bg-white">
@@ -63,10 +70,10 @@
   </div>
 
     <div class="infos-card-ind">
-      <h5><%= artwork.title %></h5>
+      <h3 class="artwork-artist"><strong><%= artwork.title %></strong></h3>
       <h5><%= artwork.price %>€</h5>
       </div>
-      <p class="artwork-title"><%= artwork.title %></p>
+      <h4 class="artwork-title"><em><%= artwork.title %></em>, <%= artwork.art_date %></h4>
   <%end%>
   <%end%>
 </div>
