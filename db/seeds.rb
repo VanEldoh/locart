@@ -68,7 +68,7 @@ book.save!
     remote_photo_url: ["https://d32dm0rphc51dk.cloudfront.net/jJ-zPT4pKip6t7pbEE4tOA/large.jpg","https://d32dm0rphc51dk.cloudfront.net/OqIKeqDUMmwZoE27MZShRg/large.jpg","https://d32dm0rphc51dk.cloudfront.net/P9b3pX86t_zJruSOo6dH1Q/large.jpg","https://d32dm0rphc51dk.cloudfront.net/oSLRcPTMA-tMycNIcsKkvg/large.jpg","https://d32dm0rphc51dk.cloudfront.net/vvKWaG9OEkwbEcGPBjJjRg/large.jpg"].sample,
     user_id: user.id
     )
-  puts "created #{artwork.title} #{artwork.address}"
+  puts "created #{artwork.title} #{artwork.address} #{artwork.latitude} #{artwork.longitude}"
   artwork.save!
 
   User.create( email: "ab@gmail.com", password:"12345678")
