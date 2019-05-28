@@ -30,21 +30,80 @@ border:0px;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-// filter
-.filterbox{
-  padding-left: 100px;
-  padding-right: 100px;
-  background-color:white;
-  border-bottom:1px solid black;
-  height: 50px;
+// // filter
+// .filterbox{
+//   padding-left: 100px;
+//   padding-right: 100px;
+//   background-color:white;
+//   border-bottom:1px solid black;
+//   height: 50px;
+//   display:flex;
+//   justify-content: space-between;
+//   p{
+//     color:#144C52;
+//     font-weight: bold;
+//   }
+// }
+
+.infos-card-ind{
   display:flex;
-  justify-content: space-between;
-  p{
-    color:#144C52;
-    font-weight: bold;
+  justify-content:space-between;
+  h5{
+  color: black;
+  font-size: 16px;
+  }
+}
+.container-ind  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .container-ind {
+    grid-template-columns: 1fr;
   }
 }
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .container-ind {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .container-ind {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .container-ind {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .container-ind {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+h5{
+  color: white;
+}
+
+h4{
+  font-size:19px;
+}
 
 .form-home{
   margin-left: 40px;
