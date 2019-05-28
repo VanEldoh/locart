@@ -1,39 +1,37 @@
-<h1>1 Artwork show</h1>
-
-<div class="body-show">
-  <div class="container">
-
-    <div class="row ">
-
-      <div class=".col-6 .col-sm-3">
-        <div class="card-artwork">
-
-          <div class="card-artwork-infos">
-            <div class="card-infos-img" style="background-image: url('<%= cl_image_path @artwork.photo%>');">
-            </div>
-          <div class=".col-6 .col-sm-3">
-            <div class="card-infos-content">
-              <h2><%= @artwork.title %></h2>
-                <%= @artwork.description %>
-                <%= @artwork.size %>
-                <%= @artwork.art_date %>
-                <%= @artwork.art_type %>
-                <%= @artwork.category %>
-                <%= @artwork.price %>
-            </div>
-          </div>
-         </div>
-      </div>
-    </div>
-          <div class="card-btn">
-            <%= link_to "Complete the artwork", new_artwork_path(@artwork), class: "btn btn-primary mt-10" %>
-            <%= link_to "View all artworks", artworks_path, class: "btn btn-outline-primary" %>
-          </div>
+<div class="container">
+  <div class ="row mt-4">
+    <div class="col-sm-8 col-md-4 mt-4 artworks-cards-container" id="card-left">
+      <div class= "card-container">
+        <div class = "show-artwork-image-card">
+          <%= cl_image_tag @artwork.photo %>
         </div>
-      </div>
+    </div>
+
+    <div class="col-sm-8 col-md-4 mt-4" id="card-right">
+      <div class= "card-container">
+        <div class="show-artwork-description">
+          <div class ="show-artwork-card">
+          <span><%= @artwork.category %></span>
+            <h1><%= @artwork.title %></h1>
+            <p><%= @artwork.description %></p>
+            <p><%= @artwork.size %></p>
+            <p><%= @artwork.art_date %></p>
+            <p><%= @artwork.art_type %></p>
+          </div>
+        <div class="show-artwork-price">
+          <span><%= @artwork.price %>€</span>
+        </div>
+        <div class="card-btn-booking">
+          <%= link_to "BOOK", artworks_path, class: "btn btn-outline-primary" %>
+        </div>
+        <div class="card-btn">
+          <%= link_to "View all artworks", artworks_path, class: "btn btn-outline-primary" %>
+        </div>
+        </div>
     </div>
   </div>
 </div>
+
 
 
 
