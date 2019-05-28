@@ -2,7 +2,12 @@
   <div class="form-home">
     <div class="container-home">
       <%= form_tag(all_artworks_path, method: "get") do %>
-           <h1>Discover and rent artworks<br> by renowned and emerging artists.</h1>
+           <h1 id="big-title">Discover and rent artworks<br> by renowned and emerging artists.</h1>
+            <div class ="animation-art">
+           <h2 class="green-style">
+           <left> <span id="typed"></span></left>
+          </h2>
+          </div>
         <%= label_tag(:address, "Where") %>
         <%= text_field_tag(:address) %>
         <%= select_tag(:art_type, options_for_select(Artwork::ARTTYPE)) %>
@@ -45,19 +50,20 @@
 
 
 <!-- <h1><center>All Artworks</center></h1> -->
-<div class="container-header">
-  <div class="section-title">
-<h1 style="text-align:center">Latest artworks</h1>
-  </div>
-        <h1>
-  <div class ="animation-art">
-           <center> <span id="typed"></span></center>
-        </h1>
-  </div>
-</div>
-<div class="container">
 
-<%##= link_to "add an Artwork", new_artwork_path, class: "btnsignlg" %>
+
+<div class="container container-header">
+
+  <div class="section-title">
+
+<h1 id="section-title"><i class="fas fa-arrow-circle-down"></i> Latest artworks</h1>
+  </div>
+
+<div class="container-button">
+
+<%= link_to "View all", new_artwork_path, class: "btnsignlg" %>
+</div>
+
 </div>
 
 <div class="container bg-white">
