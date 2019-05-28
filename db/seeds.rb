@@ -309,7 +309,7 @@ book3 = Booking.new(
 book.artwork = artTest2
 book.user = userTest2
 book.save!
-  )
+
 
 book.artwork = artTest3
 book.user = userTest2
