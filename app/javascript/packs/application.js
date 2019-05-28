@@ -4,7 +4,7 @@ import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the styleshe
 
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
-
+initAutocomplete();
 initMapbox();
 
 import { loadDynamicBannerText } from '../components/banner';
