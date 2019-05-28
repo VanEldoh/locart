@@ -15,6 +15,14 @@ class ArtworksController < ApplicationController
       @artworks = @artworks.where(art_type: params[:artwork][:type])
     end
 
+    if !params[:artwork].nil? && !params[:artwork][:category].empty?
+      @artworks = @artworks.where(category: params[:artwork][:category])
+    end
+
+    if !params[:artwork].nil? && !params[:artwork][:size].empty?
+      @artworks = @artworks.where(size: params[:artwork][:size])
+    end
+
     @artworks = @artworks.near(params[:address], 10) if !params[:address].nil? && !params[:address].empty?
 
     @markers = @artworks.map do |artwork|
