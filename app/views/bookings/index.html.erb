@@ -2,15 +2,14 @@
 
 <section class="section">
   <div class="container">
-<% @booking_requests.each do |booking| %>
+    <% @booking_requests.each do |booking| %>
       <div class="row card-booking py-3 mb-3">
         <figure class="underline col-sm-4">
-          <%#= cl_image_tag booking.artwork.photo, class: "w100" %>
           <img src="https://storage.gra1.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/exhibition/8129_1_s.jpg" class="w100" alt="Bethany Harper Williams - Oeuvres récentes">
-          <figcaption>Nom de l'œuvre</figcaption>
+          <figcaption><%= booking.artwork.title %></figcaption>
         </figure>
         <div id="content" class="col-sm-8">
-          <h2><a href="">Locataire</a></h2>
+          <h3><a href="">Locataire</a></h3>
             <!-- TODO Mettre avatar du locataire-->
           <img src="" width="48pt" class="rounded-circle" alt="">
           <p class="date">
@@ -18,30 +17,51 @@
             <span class=""><strong><%= booking.start_date %> to <%= booking.end_date %></strong></span>
           </p>
 
-          <p class="name"><%= booking.artwork.title %></p>
+          <p class="name"><strong><%= booking.artwork.price %>€</strong></p>
+          <br><br><br><br>
+          <p class="name"><%= booking.artwork.size %></p>
+          <p class="name"><%= booking.artwork.art_type %></p>
+          <p class="name"><%= booking.artwork.category %></p>
           <p class="name"><%= booking.artwork.art_date %></p>
-          <p class="name">medium & format</p>
-          <p class="name">catégorie</p>
           <button type="button" class="btn btn-primary">ok</button>
           <!-- en JS ok = checked tick -->
           <button type="button" class="btn btn-danger">cancel</button>
         </div>
       </div>
-
-    </div>
-  </section>
-
-
-<!-- <%# @bookings.each do |booking| %> -->
-<!--  <h2><%= booking.artwork.title %></h2> -->
-  <p><%= booking.start_date %> - <%= booking.end_date %></p>
-  <p><%= booking.status %></p>
-<% end %>
+    <% end %>
+  </div>
+</section>
 
 
-<h1>My booking request</h1>
-<% @booking_requests.each do |booking| %>
-  <h2><%= booking.artwork.title %></h2>
-  <p><%= booking.start_date %> - <%= booking.end_date %></p>
-  <p><%= booking.status %></p>
-<% end %>
+<h2>Mes locations</h2>
+
+<section class="section">
+  <div class="container">
+    <% @bookings.each do |booking| %>
+      <div class="row card-booking py-3 mb-3">
+        <figure class="underline col-sm-4">
+          <img src="https://storage.gra1.cloud.ovh.net/v1/AUTH_10e1a9235c63431c95e5b84a247830db/prod/exhibition/8129_1_s.jpg" class="w100" alt="Bethany Harper Williams - Oeuvres récentes">
+          <figcaption><%= booking.artwork.title %></figcaption>
+        </figure>
+        <div id="content" class="col-sm-8">
+          <h3><a href="">Locataire</a></h3>
+            <!-- TODO Mettre avatar du locataire-->
+          <img src="" width="48pt" class="rounded-circle" alt="">
+          <p class="date">
+            <i class="far fa-calendar"></i>
+            <span class=""><strong><%= booking.start_date %> to <%= booking.end_date %></strong></span>
+          </p>
+          <p class="name"><strong><%= booking.artwork.price %>€</strong></p>
+          <br><br><br><br>
+          <p class="name"><%= booking.artwork.size %></p>
+          <p class="name"><%= booking.artwork.art_type %></p>
+          <p class="name"><%= booking.artwork.category %></p>
+          <p class="name"><%= booking.artwork.art_date %></p>
+          <br><br><br><br><br><br>
+          <p class="name"><strong><%= booking.status %></strong></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
+
