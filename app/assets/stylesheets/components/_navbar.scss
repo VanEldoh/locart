@@ -1,7 +1,17 @@
+a{
+    text-decoration: none !important;
+  }
+  a:hover {
+    text-decoration: none !important;
+  }
+
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
   border-bottom: 2px solid grey;
+  abbr{
+    display:none;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,11 +23,25 @@
 }
 .search-form-control{
   display: flex;
-  margin:0px;
-  margin-left: -530px;
-  width: 200px;
+  width: 100px;
 }
 
 .nav-item{
   margin-right:10px;
+}
+
+.navbar-link {
+  justify-content: center;
+  background-color: #144C52;
+  text-decoration: none;
+  margin: 0 auto;
+  margin-top:5px;
+  width:100px;
+  color: white;
+  border: 1px solid #144C52;
+  &:hover{
+    background-color:white;
+    border: 1px solid #144C52;
+    text-decoration: none;
+  }
 }

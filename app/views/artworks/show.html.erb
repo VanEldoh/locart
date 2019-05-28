@@ -1,39 +1,43 @@
-<h1>1 Artwork show</h1>
+<div class="container">
 
-<div class="body-show">
-  <div class="container">
+      <div class= "card-container d-flex">
 
-    <div class="row ">
+        <div class="card"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cl_image_path @artwork.photo, height: 300, width: 400, crop: :fill %>')">
 
-      <div class=".col-6 .col-sm-3">
-        <div class="card-artwork">
+        <!-- <div class = "show-artwork-image-card" id="card-left" style="background-image: url('<%= cl_image_path @artwork.photo, crop: :fill %>')">
+        </div> -->
 
-          <div class="card-artwork-infos">
-            <div class="card-infos-img" style="background-image: url('<%= cl_image_path @artwork.photo%>');">
-            </div>
-          <div class=".col-6 .col-sm-3">
-            <div class="card-infos-content">
-              <h2><%= @artwork.title %></h2>
-                <%= @artwork.description %>
-                <%= @artwork.size %>
-                <%= @artwork.art_date %>
-                <%= @artwork.art_type %>
-                <%= @artwork.category %>
-                <%= @artwork.price %>
-            </div>
+        <div class="show-artwork-description" id="card-right">
+
+          <div class ="show-artwork-card">
+            <span><%= @artwork.category %></span>
+            <h1><%= @artwork.title %></h1>
+            <p><%= @artwork.description %></p>
+            <p><%= @artwork.size %></p>
+            <p><%= @artwork.art_date %></p>
+            <p><%= @artwork.art_type %></p>
           </div>
-         </div>
-      </div>
-    </div>
+
+          <div class="show-artwork-price">
+            <span><%= @artwork.price %>€</span>
+          </div>
+
+          <div class="card-btn-booking">
+            <%= link_to "BOOK", artworks_path, class: "btn btn-outline-primary" %>
+          </div>
+
           <div class="card-btn">
-            <%= link_to "Complete the artwork", new_artwork_path(@artwork), class: "btn btn-primary mt-10" %>
             <%= link_to "View all artworks", artworks_path, class: "btn btn-outline-primary" %>
           </div>
+
         </div>
+
       </div>
-    </div>
-  </div>
+
 </div>
+
 
 
 

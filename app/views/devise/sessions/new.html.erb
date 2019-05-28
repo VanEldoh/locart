@@ -17,12 +17,10 @@
             </div>
 
   <div class="form-actions">
-  <div class="btnsignlg"> <%= f.button :submit, "Log in" %>
+  <%= f.button :submit, "Log in", class: "btnsignlg" %>
   </div>
-  </div>
+  <%= render "devise/shared/links", class: "form-model" %>
 <% end %>
-
-<%= render "devise/shared/links" %>
 </div>
 </div>
 </div>
