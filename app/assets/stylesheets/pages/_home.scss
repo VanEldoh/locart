@@ -10,20 +10,18 @@ border:0px;
 
 .banner {
   background-position: center;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   //border-bottom: 1px solid black;
 }
 
 .banner h1 {
   color: black;
-  font-size: 52px;
+  font-size: 22px;
   font-weight: bold;
-  font-family: arial;
 }
 
 .banner p {
-  font-family:arial;
   font-weight:lighter;
   font-size: 20px;
   color: #144C52;
@@ -56,9 +54,8 @@ border:0px;
 .container-ind  {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
-  margin-left:10px;
-  margin-right:10px;
+  grid-gap: 24px;
+
 }
 
 
@@ -106,20 +103,52 @@ h4{
 }
 
 .form-home{
-  margin-left: 40px;
   padding-left: 20px;
   h1{
     font-size: 22px;
+    padding-bottom: 20px;
   }
   form{
-    margin-top: 100px;
+    margin: 80px auto;
     padding-top: 0px;
-    padding: 50px;
-    border-radius: 15px;
-    background-color: rgba(255, 255, 255, 0.8);  }
+    padding: 80px;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.9);  }
   button{
     background-color: #144C52;
     border:none;
     float: right;
   }
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card-result {
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.inner-div
+{
+     height: 100%;
+     width: 100%;
+     background-size: cover;
+     background-position: center;
+     transition: all 0.5s ease;
+     background-image: url('foo.jpg');
+}
+.inner-div:hover
+{
+     transform: scale(1.2);
 }

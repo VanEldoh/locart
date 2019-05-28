@@ -1,14 +1,13 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(http://www.kulturgueter.ch/Bilder/Bi_We/BiWeFr/br_4.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://2.bp.blogspot.com/-tXKI8DU4_QE/V_Kzh1Bx5jI/AAAAAAAAAoA/vCycQdtr4QASYbnqCoDw0zHi7T0tCh5tQCEw/s1600/w%25C5%2582a%25C5%259Bciwe.jpg);">
   <div class="form-home">
     <div class="container-home">
-
       <%= form_tag(all_artworks_path, method: "get") do %>
-        <%= label_tag(:address, "Où") %>
+           <h1>Discover and rent artworks<br> by renowned and emerging artists.</h1>
+        <%= label_tag(:address, "Where") %>
         <%= text_field_tag(:address) %>
         <%= select("artwork", "type", Artwork::ARTTYPE, include_blank: 'All types') %>
-        <%= submit_tag("Rechercher") %>
+        <%= submit_tag("Search") %>
       <% end %>
-
 
 <!--
       <form>
@@ -42,25 +41,32 @@
     </div>
   </div>
 </div>
+  <h1>
+           <center> <span id="typed"></span></center>
+        </h1>
 
 <!-- <h1><center>All Artworks</center></h1> -->
-<p>
-   <center> <span id="typed"></span></center>
-</p>
+<h1 style="text-align:center">Latest artworks</h1>
+<div class="container">
 
-<h4><center>Find your perfect artwork</center></h4>
 <%= link_to "add an Artwork babay", new_artwork_path  %>
+</div>
+
+<div class="container">
 <div class="container-ind">
   <% @artworks.each do |artwork| %>
   <%= link_to artwork_path(artwork) do%>
-    <div class="infos"style="background: url(<%= cl_image_path artwork.photo %>) center">
+    <div class="card-result">
+    <div class="inner-div" style="background: url(<%= cl_image_path artwork.photo %>) center">
     </div>
+  </div>
     <div class="infos-card-ind">
       <h5><%= artwork.title %></h5>
       <h5><%= artwork.price %>€</h5>
       </div>
   <%end%>
   <%end%>
+</div>
 </div>
 
 <%= render 'shared/footer' %>
