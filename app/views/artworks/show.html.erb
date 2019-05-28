@@ -1,42 +1,52 @@
 <div class="container">
+  <%= link_to "View all artworks", all_artworks_path, class: "card-btn" %>
+</div>
 
-      <div class= "card-container d-flex">
+<div class="container">
+  <div class= "card-container d-flex">
+    <div class="show-artwork-image-card" id="card-left"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+     url('<%= cl_image_path @artwork.photo, height: 300, width: 400, crop: :fill %>')">
+    </div>
 
-        <div class="card"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @artwork.photo, height: 300, width: 400, crop: :fill %>')">
+  <div class="show-artwork-description" id="card-right">
+      <div class ="show-artwork-card">
+        <span><%= @artwork.category%></span>
+        <h1><strong><%= @artwork.title %></strong></h1>
+        <p><%= @artwork.description %></p>
+        <p><%= @artwork.size%></p>
+        <p><%= @artwork.art_date %></p>
+        <p><%= @artwork.art_type %></p>
+        <span><strong><%= @artwork.price %>€/per day</strong></span>
+        <h1><%= "Book your painting" %></h1>
+      <input type='text' class="form-control" id='datepicker' placeholder='Select Date' style='width: 300px;' ><br><br>
 
-        <!-- <div class = "show-artwork-image-card" id="card-left" style="background-image: url('<%= cl_image_path @artwork.photo, crop: :fill %>')">
-        </div> -->
-
-        <div class="show-artwork-description" id="card-right">
-
-          <div class ="show-artwork-card">
-            <span><%= @artwork.category %></span>
-            <h1><%= @artwork.title %></h1>
-            <p><%= @artwork.description %></p>
-            <p><%= @artwork.size %></p>
-            <p><%= @artwork.art_date %></p>
-            <p><%= @artwork.art_type %></p>
-          </div>
-
-          <div class="show-artwork-price">
-            <span><%= @artwork.price %>€</span>
-          </div>
-
-          <div class="card-btn-booking">
-            <%= link_to "BOOK", artworks_path, class: "btn btn-outline-primary" %>
-          </div>
-
-          <div class="card-btn">
-            <%= link_to "View all artworks", artworks_path, class: "btn btn-outline-primary" %>
-          </div>
-
-        </div>
+      <input type='text' class="form-control" id='datepicker2' placeholder='Select Date' style='width: 300px;' >
+      <%= link_to "BOOK", artworks_path, class: "card-btn-booking" %>
 
       </div>
-
+  </div>
 </div>
+</div>
+
+  <!--     <div class="show-artwork-price">
+        <span><strong><%= @artwork.price %>€/per day</strong></span>
+      </div>
+  </div>
+
+    <div class= "book-artwork-date-card" style='margin-top: 100px;'>
+      <h1><%= "Book your painting" %></h1>
+      <input type='text' class="form-control" id='datepicker' placeholder='Select Date' style='width: 300px;' ><br><br>
+
+      <input type='text' class="form-control" id='datepicker2' placeholder='Select Date' style='width: 300px;' >
+      <%= link_to "BOOK", artworks_path, class: "card-btn-booking" %>
+    </div> -->
+<!--
+  </div>
+</div>
+</div>
+ </div>
+</div> -->
 
 
 
