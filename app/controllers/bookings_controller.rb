@@ -1,7 +1,8 @@
 class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
-    @booking.artwork = Artwork.find(params[:id])
+    @artwork = Artwork.find(params[:id]
+    @booking.artwork = @artwork
     @booking.user = current_user
     if @booking.save
       redirect_to artwork_path(@artwork)

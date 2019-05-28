@@ -78,9 +78,70 @@ bookingTest =  Booking.new(
   start_date: Date.new(2019,05,27),
   end_date: Date.new(2019,05,30),
   user_id: User.first.id,
-  #TODO Associer artwork réel
   artwork_id: 1,
-  status: "pending"
+  status: "Pending"
   )
 userTest.save!
 
+bookingTest1 =  Booking.new(
+  start_date: Date.new(2019,06,01),
+  end_date: Date.new(2019,07,03),
+  user_id: User.first.id,
+  artwork_id: 7,
+  status: "Accepted"
+  )
+@booking.save!
+
+bookingTest2 = Booking.new(
+  start_date: Date.new(2019,07,03),
+  end_date: Date.new(2019,07,10),
+  user_id: User.first.id,
+  artwork_id: 7,
+  status: "Declined"
+  )
+@booking.save!
+
+bookingTest3 = Booking.new(
+  start_date: Date.new(2019,06,02),
+  end_date: Date.new(2019,06,03),
+  user_id: User.first.id,
+  artwork_id: 5,
+  status: "Accepted"
+  )
+@booking.save!
+
+bookingTest4 = Booking.new(
+  start_date: Date.new(2019,06,22),
+  end_date: Date.new(2019,06,27),
+  user_id: User.first.id,
+  artwork_id: 2,
+  status: "Pending"
+  )
+@booking.save!
+
+bookingTest5 = Booking.new(
+  start_date: Date.new(2019,06,10),
+  end_date: Date.new(2019,06,15),
+  user_id: User.first.id,
+  artwork_id: 8,
+  status: "Accepted"
+  )
+@booking.save!
+
+bookingTest6 = Booking.new(
+  start_date: Date.new(2019,06,07),
+  end_date: Date.new(2019,06,09),
+  user_id: User.first.id,
+  artwork_id: 4,
+  status: "Accepted"
+  )
+@booking.save!
+
+bookingTest7 = Booking.new(
+  start_date: Date.new(2019,06,23),
+  end_date: Date.new(2019,06,27),
+  user_id: User.first.id,
+  artwork_id: 3,
+  status: "Pending"
+  )
+@booking.save!
