@@ -10,9 +10,13 @@ a{
   background: white;
   border-bottom: 2px solid grey;
   abbr{
-    display:none;
+  display:none;
+  }
+  .form-inline {
+    margin-right:700px;
   }
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -44,4 +48,9 @@ a{
     border: 1px solid #144C52;
     text-decoration: none;
   }
+}
+
+.nav-button {
+  display: flex;
+  justify-content: center;
 }

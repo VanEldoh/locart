@@ -1,42 +1,57 @@
 <div class="container">
-
-      <div class= "card-container d-flex">
-
-        <div class="card"
-  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-         url('<%= cl_image_path @artwork.photo, height: 300, width: 400, crop: :fill %>')">
-
-        <!-- <div class = "show-artwork-image-card" id="card-left" style="background-image: url('<%= cl_image_path @artwork.photo, crop: :fill %>')">
-        </div> -->
-
-        <div class="show-artwork-description" id="card-right">
-
-          <div class ="show-artwork-card">
-            <span><%= @artwork.category %></span>
-            <h1><%= @artwork.title %></h1>
-            <p><%= @artwork.description %></p>
-            <p><%= @artwork.size %></p>
-            <p><%= @artwork.art_date %></p>
-            <p><%= @artwork.art_type %></p>
-          </div>
-
-          <div class="show-artwork-price">
-            <span><%= @artwork.price %>€</span>
-          </div>
-
-          <div class="card-btn-booking">
-            <%= link_to "BOOK", artworks_path, class: "btn btn-outline-primary" %>
-          </div>
-
-          <div class="card-btn">
-            <%= link_to "View all artworks", artworks_path, class: "btn btn-outline-primary" %>
-          </div>
-
-        </div>
-
-      </div>
-
+  <%= link_to "View all artworks", all_artworks_path, class: "card-btn" %>
 </div>
+
+<div class="container">
+  <div class= "card-container d-flex">
+    <div class="show-artwork-image-card" id="card-left"
+      style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+     url('<%= cl_image_path @artwork.photo, height: 300, width: 400, crop: :fill %>')">
+    </div>
+
+  <div class="show-artwork-description" id="card-right">
+      <div class ="show-artwork-card">
+        <h2><%= @artwork.category%></h2>
+        <h1><strong><%= @artwork.title %></strong></h1>
+        <span><strong><%= @artwork.price %>€/per day</strong></span>
+        <p> <%= @artwork.description %></p>
+        <p><%= @artwork.size%></p>
+        <p><%= @artwork.art_date %></p>
+        <p><%= @artwork.art_type %></p>
+
+  <div class="">
+    <div class="form-wrapper pr-4" style="width: 400px; margin: 0 auto;">
+      <h2>Book your painting</h2>
+      <%= simple_form_for([@artwork, @booking]) do |f| %>
+        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.submit "BOOK", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+      </div>
+  </div>
+</div>
+</div>
+
+  <!--     <div class="show-artwork-price">
+        <span><strong><%= @artwork.price %>€/per day</strong></span>
+      </div>
+  </div>h1
+
+    <div class= "book-artwork-date-card" style='margin-top: 100px;'>
+      <h1><%= "Book your painting" %></h1>
+      <input type='text' class="form-control" id='datepicker' placeholder='Select Date' style='width: 300px;' ><br><br>
+
+      <input type='text' class="form-control" id='datepicker2' placeholder='Select Date' style='width: 300px;' >
+      <%= link_to "BOOK", artworks_path, class: "card-btn-booking" %>
+    </div> -->
+<!--
+  </div>
+</div>
+</div>
+ </div>
+</div> -->
 
 
 

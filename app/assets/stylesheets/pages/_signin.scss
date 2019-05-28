@@ -31,7 +31,7 @@
   display:flex;
   justify-content: center;
   background-color: #144C52;
-  margin: 0 auto;
+  margin: 0 10px;
   width:100px;
   color: white;
   border: 1px solid #144C52;
@@ -43,7 +43,30 @@
   }
 }
 
+.btnsignlg-right{
+  display:flex;
+  justify-content: center;
+  background-color: #144C52;
+  margin: 0 10px;
+  width:100px;
+  color: white;
+  float:right;
+  border: 1px solid #144C52;
+  padding: 10px
+  :hover{
+    background-color:white;
+    border: 1px solid #144C52;
+    color: white;
+  }
+}
+
 .btnsignlg:hover{
+  background-color:white;
+  border: 1px solid #144C52;
+  color: #144C52;
+}
+
+.btnsignlg-right:hover{
   background-color:white;
   border: 1px solid #144C52;
   color: #144C52;
@@ -83,6 +106,26 @@
   border: 1px solid #144C52;
   color: white;
 }
+
+.btnsign-inverse-left{
+  display:flex;
+  justify-content: center;
+  background-color: white;
+  margin: 0 auto;
+  width:200px;
+  color: #144C52;
+  border: 1px solid #144C52;
+  float: left;
+  padding: 10px;
+}
+
+.btnsign-inverse-left:hover{
+  background-color: #144C52;
+  border: 1px solid #144C52;
+  color: white;
+}
+
+
 // .form-actions{
 //    display:flex;
 //    justify-content: center;
