@@ -22,8 +22,15 @@
 }
 
 .show-artwork-card h1{
-  font-size: 25px;
+  font-size: 30px;
   color: #144C52;
+}
+
+.show-artwork-card h2 {
+  font-size: 15px;
+  font-weight: 300;
+  color: #144C52;
+  margin-right: 20px;
 }
 
 .show-artwork-card p {
@@ -35,16 +42,10 @@
   text-align: right;
 }
 
-.show-artwork-card h2 {
-  font-size: 20px;
-  font-weight: 300;
-  color: #144C52;
-  margin-right: 20px;
-}
 
 .form-wrapper h2 {
   font-weight: 300;
-  font-size: 25px;
+  font-size: 20px;
   color: #144C52;
   text-align: left;
 }
@@ -84,7 +85,7 @@
 
 
 .show-artwork-card span {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 300;
   color: #144C52;
   margin-right: 20px;
