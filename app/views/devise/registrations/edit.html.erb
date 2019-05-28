@@ -1,5 +1,5 @@
 <div class="edit-login-img">
-<div class="container">
+<div class="container-form">
   <div class="row justify-content-center">
       <div class="col-lg-10">
         <div class="form-model">
@@ -46,16 +46,17 @@
     <%= f.input :photo_cache, as: :hidden %>
   </div>
 
+ <div class="space-button">
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", class: "btnsignlg-right" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Back", :back,  class: "btnsign-inverse" %>
+</div>
+<p style="font-size:12px"><%= link_to "Unhappy ? Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 </div>
 </div>
 </div>

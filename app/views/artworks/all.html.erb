@@ -2,12 +2,15 @@
       <div class="map-cards">
   <% @artworks.each do |artwork| %>
   <%= link_to artwork_path(artwork) do%>
-    <div style="background: url(<%= cl_image_path artwork.photo %>) center">
-      <h5><%= artwork.category %></h5>
-      <h5><%= artwork.price %>€</h5>
+    <div class="infos"style="background: url(<%= cl_image_path artwork.photo %>) center">
     </div>
+    <div class="infos-card-ind">
+      <h5><%= artwork.title %></h5>
+      <h5><%= artwork.price %>€</h5>
+      </div>
   <%end%>
-<%end%>
+  <%end%>
+
 </div>
 
 

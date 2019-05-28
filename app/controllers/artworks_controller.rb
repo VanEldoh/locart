@@ -3,14 +3,6 @@ class ArtworksController < ApplicationController
   def index
     @artworks = ArtworkPolicy::Scope.new(current_user, Artwork).index
 
-    @artworks = Artwork.where.not(latitude: nil, longitude: nil)
-
-    @markers = @artworks.map do |artwork|
-      {
-        lat: artwork.latitude,
-        lng: artwork.longitude
-      }
-    end
   end
 
   def new
@@ -19,6 +11,15 @@ class ArtworksController < ApplicationController
 
   def all
     @artworks = policy_scope(Artwork)
+
+    @artworks = Artwork.where.not(latitude: nil, longitude: nil)
+
+    @markers = @artworks.map do |artwork|
+      {
+        lat: artwork.latitude,
+        lng: artwork.longitude
+      }
+    end
   end
 
   def create
