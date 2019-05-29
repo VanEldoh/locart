@@ -16,6 +16,7 @@ class BookingsController < ApplicationController
   def index
     @booking_requests = Booking.select { |booking| booking.artwork.user == current_user }
     @bookings = Booking.where(user_id: current_user.id)
+    # @artwork = current_user.artworks
   end
 
   def edit
@@ -33,7 +34,6 @@ class BookingsController < ApplicationController
   end
 
   def status_change
-    raise
   end
 
   private

@@ -1,0 +1,108 @@
+.wrapper {
+    display: flex;
+}
+
+.main-booking {
+    flex: 3;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-top: 50px;
+    width: 700px;
+}
+
+.sidebar-booking {
+    padding: 40px;
+    flex: 1;
+    margin-right: 60px;
+    border-top: 3px solid #693f7e;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 50px;
+}
+
+.sidebar-booking .btnsign-inverse{
+  display:flex;
+  justify-content: center;
+  background-color: white;
+  width:100%;
+  color: #144C52;
+  border: 1px solid #144C52;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.sidebar-booking .btnsign-inverse:hover{
+  background-color: #144C52;
+  width:100%;
+  color: white;
+  border: 1px solid #144C52;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.sidebar-booking .btnsign-inverse-green{
+  display:flex;
+  justify-content: center;
+  background-color: #144C52;
+  width:100%;
+  color: white;
+  border: 1px solid #144C52;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.sidebar-booking .btnsign-inverse-green:hover{
+  background-color: white;
+  width:100%;
+  color: #144C52;
+  border: 1px solid #144C52;
+  padding: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.img-booking {
+  background-size: cover;
+  background-position: center;
+  width: 350px;
+  height: 280px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.07);
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  overflow: hidden;
+  margin-bottom: 20px;
+
+}
+
+
+
+.item-booking {
+  display: flex;
+}
+
+.content-booking {
+  text-align: left;
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 15px;
+  color: black;
+  padding: 30px;
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .main-booking {
+        margin-right: 0;
+        margin-bottom: 60px;
+    }
+}
