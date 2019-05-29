@@ -1,3 +1,95 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-<p>Ici c'est mon dashboard, avec la liste de mes bookings</p>
+
+
+<div class="login-img-new" id="mybookings">
+  <div class="custom-container">
+    <div>
+      <button class="btnsign-inverse" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      My bookings
+      </button>
+        <button class="btnsign-inverse" type="button" data-toggle="collapse" data-target="#collapseBooking" aria-expanded="false" aria-controls="collapseExample">
+        My booked artworks
+        </button>
+    </div>
+    <div>
+      <div class="main-booking collapse show" id="collapseExample">
+        <h2>My bookings<br></h2>
+          <% @bookings.each do |booking| %>
+          <div class="item-booking">
+            <div class="img-booking">
+              <%= cl_image_tag(booking.artwork.photo, width: 400, height: 300, crop: :fill
+)%>
+            </div>
+            <div class ="content-booking">
+              <p><span style="color:#144C52"><strong><%= "Artist name: " %></strong><%= booking.artwork.user.username%></span></p>
+              <h3 class="artwork-artist"><span style="color:#144C52"><%= "Title: " %></span><strong><%= booking.artwork.title %></strong></h3>
+
+              <h4 class="artwork-title"><span style="color:#144C52"><strong><%= "Price: " %></strong><%= booking.artwork.price %>€/day</span></h4>
+              <h4 class="artwork-title"><span style="color:#144C52"><strong><%= "Type: " %></strong><%= booking.artwork.art_type %></span></h4>
+              <div class="date-status">
+                    <p class="date">
+                      <i class="far fa-calendar"></i>
+                      <span class=""><strong><%= booking.start_date %> to <%= booking.end_date %></strong></span>
+                    </p>
+                    <% if booking.artwork.user != current_user && booking.status == 'Pending' %>
+                    <p><span style="color:#144C52"><strong>Status: </strong></span><strong>Awaiting confirmation...</strong></p>
+                    <% elsif %>
+                    <% booking.artwork.user != current_user && booking.status == 'Approved' %>
+                    <i class="far fa-check-circle"></i>
+                    <% else %>
+                    <% booking.artwork.user != current_user && booking.status == 'Declined' %>
+                    <i class="fas fa-ban"></i>
+                  <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+<div class="container">
+      <div class="wrapper">
+
+        <div class="main-booking collapse" id="collapseBooking">
+          <h2>My artworks <br></h2>
+            <% @booking_requests.each do |booking| %>
+            <div class="item-booking">
+              <div class="img-booking">
+                <%= cl_image_tag booking.artwork.photo%>
+              </div>
+              <div class ="content-booking">
+                <p><span style="color:#144C52"><strong><%= "Artist name: " %></strong>Requested by: <%= booking.user.username %></span></p>
+                <h3 class="artwork-artist"><span style="color:#144C52"><%= "Title: " %></span><strong><%= booking.artwork.title %></strong></h3>
+
+                <h4 class="artwork-title"><span style="color:#144C52"><strong><%= "Price: " %></strong><%= booking.artwork.price %>€/day</span></h4>
+                <h4 class="artwork-title"><span style="color:#144C52"><strong><%= "Type: " %></strong><%= booking.artwork.art_type %></span></h4>
+                <div class="date-status">
+                      <p class="date">
+                        <i class="far fa-calendar"></i>
+                        <span class=""><strong><%= booking.start_date %> to <%= booking.end_date %></strong></span>
+                      </p>
+                      <% if booking.artwork.user == current_user && booking.status == 'Pending' %>
+
+            <%= link_to 'OK', booking_booking_status_change_path(booking), method: :post, class: 'btn btn-primary mr-1'  %>
+            <button type="button" class="btn btn-danger">cancel</button>
+
+        <% elsif %>
+          <% booking.artwork.user == curent_user && booking.status == 'Accepted' %>
+            <i class="far fa-check-circle"></i>
+          </p>
+        <% else %>
+           <% booking.artwork.user == curent_user && booking.status == 'Declined' %>
+            <i class="fas fa-ban"></i>
+          </p>
+        <% end %>
+        </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+    </div>
+    </div>
+</div>
+</div>
+
+
