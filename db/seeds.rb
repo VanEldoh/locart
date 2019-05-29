@@ -9,20 +9,38 @@ ARTWORKIMAGE= ["https://d32dm0rphc51dk.cloudfront.net/zKamQYV2KeCHU5nfNWKadA/lar
 userTest =  User.new(
   email: "userTest@gmail.com",
   password: "123456",
-  first_name: "test",
-  last_name: "test",
-  username: "test"
+  first_name: "Susanne",
+  last_name: "Wolf",
+  username: "Cindarella"
   )
 userTest.save!
 
 userTest2 =  User.new(
   email: "userTest2@gmail.com",
   password: "654321",
-  first_name: "test2",
-  last_name: "test2",
-  username: "test2"
+  first_name: "Petra",
+  last_name: "Schmidt",
+  username: "Dragonqueen"
   )
 userTest2.save!
+
+userTest3 =  User.new(
+  email: "userTest3@gmail.com",
+  password: "654321",
+  first_name: "Franz",
+  last_name: "Zimmermann",
+  username: "Bellaboo"
+  )
+userTest3.save!
+
+userTest4 =  User.new(
+  email: "userTest4@gmail.com",
+  password: "654321",
+  first_name: "Vanessa",
+  last_name: "Woman",
+  username: "Blackness"
+  )
+userTest3.save!
 
 # ARTWORK-PROFILES
 artTest = Artwork.new(
@@ -49,7 +67,7 @@ artTest1 = Artwork.new(
   price: 400,
   address:"187 Rue de Clignancourt, 75018 Paris",
   )
-artTest1.remote_photo_url = "https://amelie-paris.com/fr/peintures/3827-juste-ii.html"
+artTest1.remote_photo_url = "https://amelie-paris.com/11565-large_default/0218.jpg"
 artTest1.user = userTest
 artTest1.save!
 
@@ -92,7 +110,7 @@ artTest4 = Artwork.new(
   address: "124 Rue de Belleville,75010 Paris",
   )
 artTest4.remote_photo_url = "https://amelie-paris.com/14641-large_default/sans-titre-2.jpg"
-artTest4.user = userTest
+artTest4.user = userTest4
 artTest4.save!
 
 artTest5 = Artwork.new(
@@ -106,7 +124,7 @@ artTest5 = Artwork.new(
   address: "20 Rue du Faubourg Saint-Antoine, 75012 Paris",
   )
 artTest5.remote_photo_url = "https://amelie-paris.com/1807-large_default/demantelement.jpg"
-artTest5.user = userTest
+artTest5.user = userTest4
 artTest5.save!
 
 artTest6 = Artwork.new(
@@ -120,7 +138,7 @@ artTest6 = Artwork.new(
   address: "284 Boulevard Voltaire, 75011 Paris",
   )
 artTest6.remote_photo_url = "https://amelie-paris.com/4410-large_default/peinture-727-philippedelatour.jpg"
-artTest6.user = userTest
+artTest6.user = userTest4
 artTest6.save!
 
 artTest7 = Artwork.new(
@@ -248,7 +266,7 @@ artTest15 = Artwork.new(
   address: " 54 Rue Jenner, 75013 Paris",
   )
 artTest15.remote_photo_url = "https://amelie-paris.com/7709-large_default/figures-libres2.jpg"
-artTest15.user = userTest2
+artTest15.user = userTest3
 artTest15.save!
 
 artTest16 = Artwork.new(
@@ -262,7 +280,7 @@ artTest16 = Artwork.new(
   address: "44 Boulevard de Bercy, 75012 Paris",
   )
 artTest16.remote_photo_url = "https://amelie-paris.com/14308-large_default/ganesh.jpg"
-artTest16.user = userTest2
+artTest16.user = userTest3
 artTest16.save!
 
 artTest17 = Artwork.new(
@@ -276,7 +294,7 @@ artTest17 = Artwork.new(
   address: "24 Avenue du Bel air, 75012 Paris",
   )
 artTest17.remote_photo_url = "https://amelie-paris.com/4641-large_default/ensemble.jpg"
-artTest17.user = userTest2
+artTest17.user = userTest3
 artTest17.save!
 
 # BOOKING-PROFILES
@@ -291,7 +309,7 @@ book.user = userTest
 book.save!
 
 book2 = Booking.new(
-  start_date: '2020-02-02',
+  start_date: '2020-02-05',
   end_date: '2020-02-10',
   status: "Pending"
   )
@@ -301,50 +319,34 @@ book.user = userTest
 book.save!
 
 book3 = Booking.new(
-  start_date: '2020-02-02',
-  end_date: '2020-02-10',
+  start_date: '2020-02-10',
+  end_date: '2020-02-30',
   status: "Accepted"
   )
 
-book.artwork = artTest2
+book.artwork = artTest5
 book.user = userTest2
 book.save!
 
+book4 = Booking.new(
+  start_date: '2020-02-10',
+  end_date: '2020-02-12',
+  status: "Accepted"
+  )
 
-book.artwork = artTest3
-book.user = userTest2
+book.artwork = artTest13
+book.user = userTest3
 book.save!
 
+book5 = Booking.new(
+  start_date: '2020-02-10',
+  end_date: '2020-02-12',
+  status: "Accepted"
+  )
 
-
-# 5.times do
-#   user = User.new(
-#     email: Faker::Internet.email,
-#     password: Faker::Internet.password(8),
-#     first_name: Faker::Name.first_name,
-#     last_name: Faker::Name.last_name,
-#     username: Faker::Internet.username
-#     )
-#   user.save!
-#   puts "created #{user.username}"
-#   artwork = Artwork.new(
-#     title: Faker::TvShows::TwinPeaks.quote,
-#     description: Faker::Lorem.paragraph(2),
-#     size: Artwork::ARTSIZE.sample,
-#     art_type: Artwork::ARTTYPE.sample,
-#     category: Artwork::ARTCATEGORY.sample,
-#     art_date: rand(1980..2019),
-#     price: rand(200..1200),
-#     address: LOCATION.sample,
-#     remote_photo_url: ["https://d32dm0rphc51dk.cloudfront.net/jJ-zPT4pKip6t7pbEE4tOA/large.jpg","https://d32dm0rphc51dk.cloudfront.net/OqIKeqDUMmwZoE27MZShRg/large.jpg","https://d32dm0rphc51dk.cloudfront.net/P9b3pX86t_zJruSOo6dH1Q/large.jpg","https://d32dm0rphc51dk.cloudfront.net/oSLRcPTMA-tMycNIcsKkvg/large.jpg","https://d32dm0rphc51dk.cloudfront.net/vvKWaG9OEkwbEcGPBjJjRg/large.jpg"].sample,
-#     user_id: user.id
-#     )
-#   puts "created #{artwork.title} #{artwork.address} #{artwork.latitude} #{artwork.longitude}"
-#   artwork.save!
-
-#   User.create( email: "ab@gmail.com", password:"12345678")
-# end
-
+book.artwork = artTest4
+book.user = userTest4
+book.save!
 
 
 bookingTest1 =  Booking.new(
@@ -378,7 +380,7 @@ bookingTest4 = Booking.new(
   start_date: Date.new(2019,06,22),
   end_date: Date.new(2019,06,27),
   user_id: User.first.id,
-  artwork: artTest2,
+  artwork: artTest4,
   status: "Pending"
   )
 bookingTest4.save!
@@ -396,7 +398,7 @@ bookingTest6 = Booking.new(
   start_date: Date.new(2019,06,07),
   end_date: Date.new(2019,06,9),
   user_id: User.first.id,
-  artwork: artTest4,
+  artwork: artTest2,
   status: "Accepted"
   )
 bookingTest6.save!
@@ -409,3 +411,8 @@ bookingTest7 = Booking.new(
   status: "Pending"
   )
 bookingTest7.save!
+
+
+
+
+
