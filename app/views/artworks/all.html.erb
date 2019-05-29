@@ -1,11 +1,11 @@
 <div class ="all-view">
   <%= form_tag(all_artworks_path, method: "get") do %>
-        <%= label_tag(:address, "Where") %>
-        <%= text_field_tag(:address) %>
+        <%#= label_tag(:address, "Where") %>
+        <%= text_field_tag(:address)%>
         <%= select_tag(:art_type, options_for_select(Artwork::ARTTYPE)) %>
         <%= select_tag(:size, options_for_select(Artwork::ARTSIZE)) %>
         <%= select_tag(:category, options_for_select(Artwork::ARTCATEGORY)) %>
-        <%= submit_tag("Search") %>
+        <%= submit_tag "Search", class: "card-btn-search"  %>
       <% end %>
 </div>
 <div class="map-content">

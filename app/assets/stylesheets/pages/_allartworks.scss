@@ -1,0 +1,75 @@
+.algolia-places {
+ width: 350px;
+ margin-left: 20px;
+ margin-bottom: 25px;
+ margin-top: 25px;
+
+}
+
+#address {
+  vertical-align: none;
+}
+
+.card-btn-search {
+  color: #144C52;
+  padding-left:20px;
+  margin: 25px 10px;
+  width: 100px;
+  justify-content: center;
+  background-color: white;
+  color: #144C52;
+  border: 1px solid #144C52;
+  padding: 8px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.card-btn-search:hover {
+  color: white;
+  background-color: #144C52;
+}
+
+
+.ap-input-icon svg {
+  fill: #144C52;
+}
+
+
+#art_type {
+    justify-content: center;
+    vertical-align: top;
+    background-color: #144C52;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    width: 150px;
+    color: white;
+    border: 1px solid #144C52;
+    padding: 8px;
+    display: inline-block;
+}
+
+#size {
+    justify-content: center;
+    vertical-align: top;
+    background-color: #144C52;
+    margin: 25px 10px;
+    width: 150px;
+    color: white;
+    border: 1px solid #144C52;
+    padding: 8px;
+}
+
+#category {
+    justify-content: center;
+    vertical-align: top;
+    background-color: #144C52;
+    margin: 25px 10px;
+    width: 150px;
+    color: white;
+    border: 1px solid #144C52;
+    padding: 8px;
+
+}
+
+
