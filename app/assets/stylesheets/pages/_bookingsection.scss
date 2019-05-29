@@ -3,11 +3,23 @@
 }
 
 .main-booking {
-    flex: 3;
+    justify-content: center;
+    width: 100px;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
+    margin-left:100px;
     margin-top: 50px;
-    width: 700px;
+    width: 900px;
+}
+
+.main-booking-first {
+    justify-content: center;
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin-left:220px;
+    margin-top: 50px;
+    width: 900px;
 }
 
 .sidebar-booking {
@@ -17,6 +29,11 @@
     border-top: 3px solid #693f7e;
     background-color: rgba(255, 255, 255, 0.9);
     margin-top: 50px;
+}
+
+.custom-button-two {
+  display: flex;
+  justify-content: space-around;
 }
 
 .sidebar-booking .btnsign-inverse{

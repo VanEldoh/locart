@@ -2,7 +2,7 @@
 
 <div class="login-img-new" id="mybookings">
   <div class="custom-container">
-    <div>
+    <div class="custom-button-two">
       <button class="btnsign-inverse" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
       My bookings
       </button>
@@ -11,7 +11,7 @@
         </button>
     </div>
     <div>
-      <div class="main-booking collapse show" id="collapseExample">
+      <div class="main-booking-first collapse show" id="collapseExample">
         <h2>My bookings<br></h2>
           <% @bookings.each do |booking| %>
           <div class="item-booking">
@@ -34,10 +34,10 @@
                     <p><span style="color:#144C52"><strong>Status: </strong></span><strong>Awaiting confirmation...</strong></p>
                     <% elsif %>
                     <% booking.artwork.user != current_user && booking.status == 'Approved' %>
-                    <i class="far fa-check-circle"></i>
+                    <i class="far fa-check-circle"></i> <strong><%= "Your request has been approved" %></strong>
                     <% else %>
                     <% booking.artwork.user != current_user && booking.status == 'Declined' %>
-                    <i class="fas fa-ban"></i>
+                    <i class="fas fa-ban"></i> <strong><%= "Sorry, the artwork is unavailable" %></strong>
                   <% end %>
               </div>
             </div>
