@@ -1,5 +1,5 @@
 class ArtworksController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: [:index, :show, :all]
   def index
     @artworks = ArtworkPolicy::Scope.new(current_user, Artwork).index
   end
@@ -27,7 +27,8 @@ class ArtworksController < ApplicationController
     @markers = @artworks.map do |artwork|
       {
         lat: artwork.latitude,
-        lng: artwork.longitude
+        lng: artwork.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { artwork: artwork })
       }
     end
   end
