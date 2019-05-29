@@ -101,12 +101,12 @@
     margin-top: 60px;
   }
 
-  .card-artwork-image,
-  .card-artwork-description {
+  #card-left,
+  #card-right {
     width: 100%;
   }
 
-  .card-artwork-image img {
+  #card-left {
     width: 300px;
     right: 0;
     top: -65px;
@@ -115,7 +115,7 @@
 }
 
 @media (max-width: 535px) {
-  .card-artwork-image img {
+  #card-left {
     width: 220px;
     top: -85px;
   }
