@@ -66,8 +66,6 @@
                         <span class=""><strong><%= booking.start_date %> to <%= booking.end_date %></strong></span>
                       </p>
                       <% if booking.artwork.user == current_user && booking.status == 'Pending' %>
-
-            <%= link_to 'OK', booking_booking_status_change_path(booking), method: :post, class: 'btn btn-primary mr-1'  %>
             <button type="button" class="btn btn-danger">cancel</button>
 
         <% elsif %>
