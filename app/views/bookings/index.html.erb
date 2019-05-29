@@ -1,8 +1,5 @@
 <h2 class="booking-title pl-5">A confirmer</h2>
 
-
-
-
 <section class="section">
     <% @booking_requests.each do |booking| %>
     <div class="booking-artwork-card">
@@ -48,8 +45,8 @@
 <h2 class="booking-title pl-5">Mes locations</h2>
 
 <section class="section container">
-    <% @bookings.each do |booking| %>
-
+  <% @bookings.each do |booking| %>
+    <div class="booking-artwork-card">
       <div class="row w-100 align-items-center">
 
 
@@ -91,6 +88,7 @@
         </div>
 
       </div>
+    </div>
     <% end %>
 </section>
 
