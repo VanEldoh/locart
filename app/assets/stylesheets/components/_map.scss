@@ -6,7 +6,7 @@
 .map-cards {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   padding: 16px;
 }
@@ -15,6 +15,7 @@
   height: 100vh;
   position: sticky;
   top: 0;
+  grid-template-columns: 1fr;
 }
 
 /*needed for old page, remove after merge of new frontend module*/
@@ -49,7 +50,7 @@
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 1200px) {
   .map-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   #map {
     display: block;
