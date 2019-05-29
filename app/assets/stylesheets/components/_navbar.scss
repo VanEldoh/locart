@@ -19,7 +19,9 @@ a{
   }
 }
 
-
+.container-button{
+  display: flex;
+}
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -34,6 +36,7 @@ a{
 
 .nav-item{
   margin-right:10px;
+  list-style: none;
 }
 
 .navbar-link {
@@ -55,4 +58,17 @@ a{
 .nav-button {
   display: flex;
   justify-content: center;
+}
+
+.btnsignsm{
+  margin-right:10px;
+  background-color:#144C52;
+  padding: 10px;
+  color: white;
+  &:hover{
+    background-color: white;
+    color: #144C52;
+    border: 1px solid #144C52;
+    text-decoration: none;
+  }
 }

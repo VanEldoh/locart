@@ -5,7 +5,7 @@ class ArtworkPolicy < ApplicationPolicy
     end
 
     def index
-      scope.all.order(:id).first(10)
+      scope.all.order(:id).first(9)
     end
   end
 end
