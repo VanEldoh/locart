@@ -18,6 +18,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto align-items-center">
       <li class="nav-item">
+
+          <% if user_signed_in? %>
+          <%= link_to "Add an Artwork", new_artwork_path, class: "btnsignsm" %>
+          <%end %>
+
        <% if user_signed_in? %>
           Welcome back <strong><%= current_user.first_name %></strong> !!
 <!--          link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'
