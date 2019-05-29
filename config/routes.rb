@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'artworks#index'
-
-
+  resources :users, only: :show
   resources :artworks, only: [:index, :new, :create, :show] do
     collection do
       get 'all'
