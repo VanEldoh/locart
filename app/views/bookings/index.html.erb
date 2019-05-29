@@ -20,14 +20,21 @@
           </p>
         </div>
 
-        <% if booking.user == current_user && booking.status == 'Pending' %>
+        <% if booking.artwork.user == current_user && booking.status == 'Pending' %>
           <div class="button-group d-flex flex-shrink-1">
             <%= link_to 'OK', booking_booking_status_change_path(booking), method: :post, class: 'btn btn-primary mr-1'  %>
-              <!-- en JS ok = checked tick -->
             <button type="button" class="btn btn-danger">cancel</button>
           </div>
+        <% elsif %>
+          <% booking.artwork.user == curent_user && booking.status == 'Accepted' %>
+          <p class="booking-approved">
+            <i class="far fa-check-circle"></i>
+          </p>
         <% else %>
-          <p>awaiting confirmation...</p>
+           <% booking.artwork.user == curent_user && booking.status == 'Declined' %>
+            <p class="booking-declined">
+            <i class="fas fa-ban"></i>
+          </p>
         <% end %>
       </div>
     </div>
@@ -38,8 +45,8 @@
 <h2 class="booking-title pl-5">Mes locations</h2>
 
 <section class="section container">
-    <% @bookings.each do |booking| %>
-
+  <% @bookings.each do |booking| %>
+    <div class="booking-artwork-card">
       <div class="row w-100 align-items-center">
 
 
@@ -63,12 +70,25 @@
               <i class="far fa-calendar"></i>
               <span class=""><strong><%= booking.start_date %> to <%= booking.end_date %></strong></span>
             </p>
-            <div class="booking-status d-flex flex-shrink-1">
-            <p><strong><%= booking.status %></strong></p>
+            <% if booking.artwork.user != current_user && booking.status == 'Pending' %>
+              <div class="booking-status d-flex flex-shrink-1">
+              <p><strong>Awaiting confirmation...</strong></p>
+            <% elsif %>
+              <% booking.artwork.user != current_user && booking.status == 'Approved' %>
+                <p class="booking-approved">
+                <i class="far fa-check-circle"></i>
+                </p>
+              <% else %>
+              <% booking.artwork.user != current_user && booking.status == 'Declined' %>
+              <p class="booking-declined">
+            <i class="fas fa-ban"></i>
+              </p>
             </div>
+          <% end %>
         </div>
 
       </div>
+    </div>
     <% end %>
 </section>
 
