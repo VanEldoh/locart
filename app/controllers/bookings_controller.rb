@@ -4,10 +4,11 @@ class BookingsController < ApplicationController
     @artwork = Artwork.find(params[:artwork_id])
     @booking.artwork = @artwork
     @booking.user = current_user
+
     @booking.status = "Pending"
 
     if @booking.save!
-      redirect_to artwork_bookings_path(@artwork)
+      redirect_to user_path(current_user)
     else
       redirect_to artwork_path(@artwork)
     end
