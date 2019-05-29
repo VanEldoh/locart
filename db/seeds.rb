@@ -82,8 +82,8 @@ artTest3.user = userTest
 artTest3.save!
 
 artTest4 = Artwork.new(
-  title: "Sans-titre",
-  description: "Photographie argentique sur pellicule noir et blanc",
+  title: "Zimzabi",
+  description: "Photographie argentique sur pellicule",
   size: "medium",
   art_type: 'Photography',
   category: 'Black & White',
@@ -97,7 +97,7 @@ artTest4.save!
 
 artTest5 = Artwork.new(
   title: "Diasec",
-  description: "procédé argento-numérique monté sous Diasec",
+  description: "procédé argento-numérique",
   size: "medium",
   art_type: 'Work on Paper',
   category: 'Expressive',
@@ -124,8 +124,8 @@ artTest6.user = userTest
 artTest6.save!
 
 artTest7 = Artwork.new(
-  title: "sans-titre-2",
-  description: "Fil de fer, papier et contre poids en fonte d'aluminium",
+  title: "Love",
+  description: "Fil de fer,en fonte d'aluminium",
   size: "large",
   art_type: 'Sculpture',
   category: 'Colored',
@@ -139,7 +139,7 @@ artTest7.save!
 
 artTest8 = Artwork.new(
   title: "La Femme",
-  description: "Acrylique, crayon graphite, gesso sur planche et bois",
+  description: "Acrylique, crayon graphite",
   size: "large",
   art_type: 'Drawing',
   category: 'Expressive',
@@ -209,8 +209,8 @@ artTest12.user = userTest2
 artTest12.save!
 
 artTest13 = Artwork.new(
-  title: "FRAGMENTS N°5",
-  description: "Photographie noir et blanc argentique , numérotée et signée",
+  title: "N°5",
+  description: "Photographie noir et blanc argentique",
   size: "medium",
   art_type: 'Design',
   category: 'Graphik',
