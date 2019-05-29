@@ -8,11 +8,14 @@
            <left> <span id="typed"></span></left>
           </h2>
           </div>
-        <%= label_tag(:address, "Where") %>
+        <%#= label_tag(:address, "Where") %>
+        <div class ="search-bar-index">
         <%= text_field_tag(:address) %>
         <%= select_tag(:art_type, options_for_select(Artwork::ARTTYPE)) %>
-        <%= submit_tag("Search") %>
+        <%= submit_tag "Search", class: "card-btn-search" %>
+        </div>
       <% end %>
+
 
 <!--
       <form>
