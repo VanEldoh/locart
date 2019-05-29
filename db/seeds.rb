@@ -351,61 +351,61 @@ bookingTest1 =  Booking.new(
   start_date: Date.new(2019,06,01),
   end_date: Date.new(2019,07,03),
   user_id: User.first.id,
-  artwork_id: 7,
+  artwork: artTest7,
   status: "Accepted"
   )
-@booking.save!
+bookingTest1.save!
 
 bookingTest2 = Booking.new(
   start_date: Date.new(2019,07,03),
   end_date: Date.new(2019,07,10),
   user_id: User.first.id,
-  artwork_id: 7,
+  artwork: artTest7,
   status: "Declined"
   )
-@booking.save!
+bookingTest2.save!
 
 bookingTest3 = Booking.new(
   start_date: Date.new(2019,06,02),
   end_date: Date.new(2019,06,03),
   user_id: User.first.id,
-  artwork_id: 5,
+  artwork: artTest5,
   status: "Accepted"
   )
-@booking.save!
+bookingTest3.save!
 
 bookingTest4 = Booking.new(
   start_date: Date.new(2019,06,22),
   end_date: Date.new(2019,06,27),
   user_id: User.first.id,
-  artwork_id: 2,
+  artwork: artTest2,
   status: "Pending"
   )
-@booking.save!
+bookingTest4.save!
 
 bookingTest5 = Booking.new(
   start_date: Date.new(2019,06,10),
   end_date: Date.new(2019,06,15),
   user_id: User.first.id,
-  artwork_id: 8,
+  artwork: artTest8,
   status: "Accepted"
   )
-@booking.save!
+bookingTest5.save!
 
 bookingTest6 = Booking.new(
   start_date: Date.new(2019,06,07),
-  end_date: Date.new(2019,06,09),
+  end_date: Date.new(2019,06,9),
   user_id: User.first.id,
-  artwork_id: 4,
+  artwork: artTest4,
   status: "Accepted"
   )
-@booking.save!
+bookingTest6.save!
 
 bookingTest7 = Booking.new(
   start_date: Date.new(2019,06,23),
   end_date: Date.new(2019,06,27),
   user_id: User.first.id,
-  artwork_id: 3,
+  artwork: artTest3,
   status: "Pending"
   )
-@booking.save!
+bookingTest7.save!
