@@ -15,7 +15,7 @@
   height: 100vh;
   position: sticky;
   top: 0;
-  grid-template-columns: 1fr;
+  max-width: 40%;
 }
 
 /*needed for old page, remove after merge of new frontend module*/
