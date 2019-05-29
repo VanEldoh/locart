@@ -1,10 +1,16 @@
-<div style="position: relative">
-  <%= cl_image_tag artwork.photo, :width => 100 %>
+<div class="map-img" style="position: relative">
+  <%= cl_image_tag artwork.photo, :width => 200 %>
 <div class="caption"><%= artwork.title %></div>
 </div>
-
+<br>
+<center>
 <div class="mapwindow-details">
-  <h3>Artist: <%= artwork.user.username %></h3>
-    <p><%= artwork.price %>€/day</p>
+  <h4>Artist: <strong><%= artwork.user.username %></strong></h4>
+    <h4><strong><%= artwork.price %>€/day</h4></strong>
+</div>
+</center>
+<br>
+<div class="mapwindow-link">
+  <%= link_to 'More details', artwork_path(artwork) %>
 </div>
 
