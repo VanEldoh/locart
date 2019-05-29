@@ -1,0 +1,10 @@
+<div style="position: relative">
+  <%= cl_image_tag artwork.photo, :width => 100 %>
+<div class="caption"><%= artwork.title %></div>
+</div>
+
+<div class="mapwindow-details">
+  <h3>Artist: <%= artwork.user.username %></h3>
+    <p><%= artwork.price %>€/day</p>
+</div>
+
