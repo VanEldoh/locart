@@ -1,4 +1,4 @@
-<h2 class="booking-title pl-5">A confirmer</h2>
+<h2 class="booking-title pl-5">Mes oeuvres </h2>
 
 <section class="section">
     <% @booking_requests.each do |booking| %>
@@ -91,6 +91,37 @@
     </div>
     <% end %>
 </section>
+
+<div class="login-img">
+  <div class="container">
+    <div class="wrapper">
+        <div class ="sidebar-booking">
+          <%= link_to "My bookings", all_artworks_path, class: "btnsign-inverse" %>
+          <%= link_to "My artworks", all_artworks_path, class: "btnsign-inverse" %>
+        </div>
+        <div class="main-booking">
+          <h2>My bookings</h2>
+            <% @bookings.each do |booking| %>
+            <div class="item-booking">
+
+              <div class="img-booking">
+                <%= cl_image_tag booking.artwork.photo%>
+              </div>
+
+
+              <div class ="content-booking">
+                <p><span style="color:#144C52"><strong><%= "Artist name: " %></strong><%= booking.artwork.user.username%></span></p>
+                <h3 class="artwork-artist"><span style="color:#144C52"><%= "Title: " %></span><strong><%= booking.artwork.title %></strong></h3>
+
+                <h4 class="artwork-title"><span style="color:#144C52"><strong><%= "Price: " %></strong><%= booking.artwork.price %>€/day</span></h4>
+                <h4 class="artwork-title"><span style="color:#144C52"><strong><%= "Type: " %></strong><%= booking.artwork.art_type %></span></h4>
+              </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+  </div>
+</div>
 
 
 
